@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
+
+a {
+  @apply transition-colors;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-slate-50 dark:ring-offset-slate-950;
+}
+
+body.dark {
+  color-scheme: dark;
+}
+
+.dark body,
+body.dark {
+  @apply bg-slate-950 text-slate-100;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.shadow-soft {
+  box-shadow: 0 20px 50px -20px rgba(15, 23, 42, 0.35);
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.2);
+}
