@@ -4,7 +4,7 @@ const footerLinks = {
   company: [
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
-    { label: "Blog", href: "/blog" }
+    { label: "Contact", href: "/contact" }
   ],
   services: [
     { label: "SEO", href: "/services/seo" },
@@ -13,7 +13,6 @@ const footerLinks = {
     { label: "Analytics", href: "/services/analytics" }
   ],
   resources: [
-    { label: "Insights", href: "/blog" },
     { label: "Privacy", href: "#" },
     { label: "Terms", href: "#" }
   ]

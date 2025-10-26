@@ -35,21 +35,6 @@ export interface CaseStudyDetail extends CaseStudySummary {
   content: string;
 }
 
-export interface BlogPostSummary {
-  slug: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  author: string;
-  readTime: string;
-  coverImage: string;
-  tags: string[];
-}
-
-export interface BlogPostDetail extends BlogPostSummary {
-  content: string;
-}
-
 const CONTENT_ROOT = path.join(process.cwd(), "content");
 
 async function parseMarkdown(filePath: string) {
@@ -141,59 +126,4 @@ export const getCaseStudyBySlug = cache(async (slug: string): Promise<CaseStudyD
   } catch (error) {
     return null;
   }
-});
-
-export const getAllBlogPosts = cache(async (): Promise<BlogPostSummary[]> => {
-  const dir = path.join(CONTENT_ROOT, "blog");
-  const files = await fs.readdir(dir);
-  const posts = await Promise.all(
-    files
-      .filter((file) => file.endsWith(".md") || file.endsWith(".mdx"))
-      .map(async (file) => {
-        const slug = file.replace(/\.(md|mdx)$/, "");
-        const { data } = await parseMarkdown(path.join(dir, file));
-        return {
-          slug,
-          title: data.title as string,
-          excerpt: data.excerpt as string,
-          date: data.date as string,
-          author: data.author as string,
-          readTime: data.readTime as string,
-          coverImage: (data.coverImage as string) ?? "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80",
-          tags: (data.tags as string[]) ?? []
-        } satisfies BlogPostSummary;
-      })
-  );
-
-  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-});
-
-export const getBlogPostBySlug = cache(async (slug: string): Promise<BlogPostDetail | null> => {
-  const mdExtensions = [".md", ".mdx"];
-  for (const ext of mdExtensions) {
-    const filePath = path.join(CONTENT_ROOT, "blog", `${slug}${ext}`);
-    try {
-      const { data, content } = await parseMarkdown(filePath);
-      return {
-        slug,
-        title: data.title as string,
-        excerpt: data.excerpt as string,
-        date: data.date as string,
-        author: data.author as string,
-        readTime: data.readTime as string,
-        coverImage: (data.coverImage as string) ?? "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80",
-        tags: (data.tags as string[]) ?? [],
-        content
-      } satisfies BlogPostDetail;
-    } catch (error) {
-      // continue trying other extensions
-    }
-  }
-
-  return null;
-});
-
-export const getLatestBlogPosts = cache(async (limit = 3) => {
-  const posts = await getAllBlogPosts();
-  return posts.slice(0, limit);
 });

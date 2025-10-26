@@ -1,4 +1,3 @@
-import { BlogCard } from "@/components/blog-card";
 import { Button } from "@/components/button";
 import { Card } from "@/components/card";
 import { Hero } from "@/components/hero";
@@ -6,7 +5,7 @@ import { Reveal } from "@/components/reveal";
 import { SectionHeader } from "@/components/section-header";
 import { ServiceCard } from "@/components/service-card";
 import { createMetadata } from "@/lib/seo";
-import { getAllServices, getLatestBlogPosts } from "@/lib/content";
+import { getAllServices } from "@/lib/content";
 
 export const metadata = createMetadata({
   title: "Corallo Digital - Growth marketing that compounds",
@@ -15,10 +14,7 @@ export const metadata = createMetadata({
 });
 
 export default async function HomePage() {
-  const [services, posts] = await Promise.all([
-    getAllServices(),
-    getLatestBlogPosts()
-  ]);
+  const services = await getAllServices();
 
   const differentiators = [
     {
@@ -80,29 +76,6 @@ export default async function HomePage() {
                   <h3 className="text-xl font-semibold text-white">{item.title}</h3>
                   <p className="text-sm text-slate-300">{item.description}</p>
                 </Card>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-slate-900 py-24 text-white">
-        <div className="container mx-auto px-6 lg:px-8">
-          <Reveal>
-            <SectionHeader
-              eyebrow="Insights"
-              title="Latest thinking from the lab"
-              description="Frameworks, playbooks, and benchmarks to keep you ahead of platform shifts."
-            >
-              <Button href="/blog" variant="secondary">
-                Explore all posts
-              </Button>
-            </SectionHeader>
-          </Reveal>
-          <div className="mt-12 grid gap-8 lg:grid-cols-3">
-            {posts.map((post) => (
-              <Reveal key={post.slug}>
-                <BlogCard post={post} />
               </Reveal>
             ))}
           </div>

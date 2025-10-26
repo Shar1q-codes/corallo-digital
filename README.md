@@ -1,6 +1,6 @@
 # Corallo Digital Marketing Site
 
-A modern, accessible marketing website for Corallo Digital built with Next.js 14, the App Router, and Tailwind CSS. The project showcases services, case studies, thought leadership, and an interactive contact flow designed for high-performing growth teams.
+A modern, accessible marketing website for Corallo Digital built with Next.js 14, the App Router, and Tailwind CSS. The project showcases services, case studies, and an interactive contact flow designed for high-performing growth teams.
 
 ## Tech stack
 
@@ -48,7 +48,6 @@ app/
   work/              # Case studies listing
   about/             # Company story and team
   contact/           # Contact form and info
-  blog/              # Blog index + dynamic posts
   api/contact/       # Dummy contact endpoint
   sitemap.ts         # Dynamic sitemap
   robots.ts          # Robots directives
@@ -56,7 +55,6 @@ components/          # UI primitives and sections
 content/
   services/*.md      # Service detail content
   work/*.md          # Case study content
-  blog/*.mdx         # Markdown-ready blog posts
 lib/
   content.ts         # Markdown loaders
   seo.ts             # Reusable metadata helper
@@ -67,9 +65,7 @@ lib/
 
 - **Services**: `/content/services/*.md` with frontmatter fields for title, summary, bullets, and FAQs.
 - **Case studies**: `/content/work/*.md` capturing client, challenge, solution, results, and metrics.
-- **Blog posts**: `/content/blog/*.mdx` storing long-form content with tags, author, and metadata.
-
-Update or add new Markdown/MDX files and the site will automatically surface content on the corresponding routes.
+Update or add new Markdown files and the site will automatically surface content on the corresponding routes.
 
 ## Accessibility & performance
 
