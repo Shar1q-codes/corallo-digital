@@ -45,7 +45,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 className="font-semibold text-primary dark:text-white">Office hours</h4>
-                <p>Mon - Fri, 8:30am - 6:00pm PT</p>
+                <p>Mon - Fri, 9:00am - 7:00pm PT</p>
               </div>
             </div>
           </Card>

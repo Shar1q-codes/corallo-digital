@@ -28,4 +28,4 @@ Your website should be the clearest expression of your brand promise and pipelin
 
 ## What happens after launch
 
-We do not disappear once the site goes live. Expect testing plans, speed optimization, and fresh content support so landing pages, resources, and campaign hubs stay sharp. The result: a web experience ready for the next three months of growth and beyond.
+We do not disappear once the site goes live. Expect testing plans, speed optimization, and fresh content support so landing pages, resources, and campaign hubs stay sharp for whatever comes next.

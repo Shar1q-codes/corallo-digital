@@ -1,10 +1,13 @@
 import {
   ChartBarIcon,
+  CpuChipIcon,
   CursorArrowRaysIcon,
   DocumentTextIcon,
   EnvelopeIcon,
+  FunnelIcon,
   GlobeAltIcon,
   MagnifyingGlassIcon,
+  PaintBrushIcon,
   SparklesIcon,
   UserGroupIcon
 } from "@heroicons/react/24/outline";
@@ -18,6 +21,9 @@ type IconName =
   | "Email"
   | "Analytics"
   | "Web"
+  | "AI"
+  | "Brand"
+  | "Funnel"
   | "SparklesIcon"
   | string;
 
@@ -30,6 +36,9 @@ export function resolveIcon(name: IconName): ElementType {
     Email: EnvelopeIcon,
     Analytics: ChartBarIcon,
     Web: GlobeAltIcon,
+    AI: CpuChipIcon,
+    Brand: PaintBrushIcon,
+    Funnel: FunnelIcon,
     SparklesIcon: SparklesIcon
   };
 

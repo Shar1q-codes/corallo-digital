@@ -17,7 +17,7 @@ faq:
 
 ## Growth framework
 
-We start with a deep dive into your unit economics, audience segments, and historical performance. Within the first 30 days we ship a testing roadmap that balances foundational fixes with bold experiments. Budget pacing, creative refreshes, and landing page alignment are handled with daily monitoring and clear reporting.
+We start with a deep dive into your unit economics, audience segments, and historical performance. From the kickoff we build a testing roadmap that balances foundational fixes with bold experiments. Budget pacing, creative refreshes, and landing page alignment are handled with daily monitoring and clear reporting.
 
 ## Experimentation approach
 

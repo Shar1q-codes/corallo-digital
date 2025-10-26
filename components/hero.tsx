@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 import { Button } from "@/components/button";
@@ -12,9 +13,9 @@ const heroVariants = {
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <div className="container mx-auto px-6 py-24 lg:px-8 lg:py-32">
+      <div className="container mx-auto grid gap-12 px-6 py-24 lg:grid-cols-12 lg:px-8 lg:py-32">
         <motion.div
-          className="max-w-3xl"
+          className="lg:col-span-6"
           initial={"hidden"}
           animate={"visible"}
           variants={heroVariants}
@@ -37,6 +38,24 @@ export function Hero() {
             <Button href="/services" variant="secondary" size="lg">
               Explore Services
             </Button>
+          </div>
+        </motion.div>
+        <motion.div
+          className="relative lg:col-span-6"
+          initial={"hidden"}
+          animate={"visible"}
+          variants={heroVariants}
+          custom={0.1}
+        >
+          <div className="relative h-80 overflow-hidden rounded-3xl border border-slate-800 bg-slate-900 shadow-soft sm:h-96 lg:h-full">
+            <Image
+              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80"
+              alt="Team reviewing digital marketing performance dashboards in a modern workspace"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </div>
         </motion.div>
       </div>

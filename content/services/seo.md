@@ -10,18 +10,18 @@ bullets:
   - Experiment-led approach to testing new SERP features and frameworks
 faq:
   - question: "How long until we see SEO impact?"
-    answer: "We identify quick wins in the first 30 days, while compounding growth typically appears between months 3-6 depending on competitive landscape."
+    answer: "Timelines vary based on your starting point. We prioritize rapid diagnostics and align with you on milestones rather than promising a fixed schedule."
   - question: "Do you collaborate with internal content teams?"
     answer: "Yes. We co-create briefs, workflows, and enablement so in-house writers and Corallo strategists ship as one team."
 ---
 
 ## What we deliver
 
-We combine technical SEO, content architecture, and authority building into a single operating system. Expect proactive monitoring, weekly experiment scorecards, and dashboards that connect rankings to revenue. Each quarter, we refresh the roadmap based on demand signals, search landscape shifts, and product launches.
+We combine technical SEO, content architecture, and authority building into a single operating system. Expect proactive monitoring, experiment scorecards, and dashboards that connect rankings to revenue. Roadmaps are refreshed on a recurring cadence informed by demand signals, search landscape shifts, and product launches.
 
 ## Core program elements
 
-- Technical and content audits refreshed quarterly
+- Technical and content audits refreshed on an ongoing cadence
 - Customer-led keyword research and intent modeling
 - Content brief factory with approval workflows
 - Internal linking and pillar clustering strategy

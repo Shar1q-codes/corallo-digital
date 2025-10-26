@@ -1,7 +1,5 @@
 import Link from "next/link";
 
-import { NewsletterForm } from "@/components/newsletter-form";
-
 const footerLinks = {
   company: [
     { label: "About", href: "/about" },
@@ -66,12 +64,11 @@ export function Footer() {
           </div>
           <div className="space-y-4">
             <h4 className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
-              Newsletter
+              Contact
             </h4>
             <p className="text-sm text-slate-300">
-              Monthly insights on growth strategies, experimentation, and creative that converts.
+              Reach out at hello@corallodigital.com to plan a working session or explore partnership options.
             </p>
-            <NewsletterForm />
           </div>
         </div>
         <div className="mt-12 flex flex-col gap-4 border-t border-slate-800 pt-8 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">

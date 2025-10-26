@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { Card } from "@/components/card";
 import { SectionHeader } from "@/components/section-header";
 import { createMetadata } from "@/lib/seo";
@@ -38,12 +36,16 @@ export default function AboutPage() {
       <div className="mt-12 grid gap-12 lg:grid-cols-[1.3fr_1fr]">
         <Reveal>
           <Card variant="outline" className="space-y-6">
-            <h3 className="text-lg font-semibold text-primary dark:text-white">From specialist freelancers to integrated studio</h3>
+            <h3 className="text-lg font-semibold text-primary dark:text-white">From launch plan to embedded partner</h3>
             <p className="text-base text-slate-600 dark:text-slate-300">
-              After years of leading in-house growth teams, we saw how fragmented vendor relationships slowed momentum. Corallo Digital launched in 2018 with a simple mission: give founders and marketing leaders a single accountable partner to orchestrate full-funnel growth. Today, our team spans strategists, media buyers, creatives, analysts, and marketing technologists who build resilient growth engines together.
+              Corallo Digital is a newly launched studio created to give founders and marketing leaders an integrated partner
+              across strategy, creative, and analytics. We are assembling a core collective of strategists, media operators,
+              and technologists who co-build growth engines alongside your team from day one.
             </p>
             <p className="text-base text-slate-600 dark:text-slate-300">
-              We believe high-performing marketing blends qualitative insight with quantitative rigor. That means structured experimentation, live dashboards, and tight feedback loops with product and revenue teams. We celebrate curiosity, candor, and creative bravery.
+              We believe high-performing marketing blends qualitative insight with quantitative rigor. That means structured
+              experimentation, live dashboards, and tight feedback loops with product and revenue teams. We celebrate curiosity,
+              candor, and creative bravery.
             </p>
           </Card>
         </Reveal>
@@ -53,7 +55,7 @@ export default function AboutPage() {
             <ul className="space-y-3 text-sm text-slate-300">
               <li>Embedded operating rhythm that mirrors your internal standups, retros, and planning cadences.</li>
               <li>Cross-functional pod covering strategy, creative, media, and data without bolting on extra vendors.</li>
-              <li>Quarterly reviews focused on learnings, resourcing, and the next most impactful experiments.</li>
+              <li>Regular reviews focused on learnings, resourcing, and the next most impactful experiments.</li>
             </ul>
           </Card>
         </Reveal>
