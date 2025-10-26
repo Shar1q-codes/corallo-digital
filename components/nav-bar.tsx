@@ -11,7 +11,6 @@ import { cn } from "@/lib/utils";
 const links = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/work", label: "Work" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" }
@@ -62,8 +61,8 @@ export function NavBar() {
           })}
         </nav>
         <div className="hidden items-center gap-4 lg:flex">
-          <Button href="/work" variant="ghost">
-            View Work
+          <Button href="/services" variant="ghost">
+            View Services
           </Button>
           <Button href="/contact" variant="primary">
             Get a Proposal
@@ -110,8 +109,8 @@ export function NavBar() {
             })}
           </ul>
           <div className="mt-6 flex flex-col gap-3">
-            <Button href="/work" variant="ghost" className="justify-center">
-              View Work
+            <Button href="/services" variant="ghost" className="justify-center">
+              View Services
             </Button>
             <Button href="/contact" className="justify-center">
               Get a Proposal

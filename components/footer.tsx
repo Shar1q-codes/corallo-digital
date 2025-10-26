@@ -5,7 +5,7 @@ import { NewsletterForm } from "@/components/newsletter-form";
 const footerLinks = {
   company: [
     { label: "About", href: "/about" },
-    { label: "Work", href: "/work" },
+    { label: "Services", href: "/services" },
     { label: "Blog", href: "/blog" }
   ],
   services: [

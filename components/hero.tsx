@@ -34,8 +34,8 @@ export function Hero() {
             <Button href="/contact" size="lg">
               Get a Proposal
             </Button>
-            <Button href="/work" variant="secondary" size="lg">
-              View Work
+            <Button href="/services" variant="secondary" size="lg">
+              Explore Services
             </Button>
           </div>
         </motion.div>

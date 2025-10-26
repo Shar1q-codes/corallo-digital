@@ -3,6 +3,7 @@ import {
   CursorArrowRaysIcon,
   DocumentTextIcon,
   EnvelopeIcon,
+  GlobeAltIcon,
   MagnifyingGlassIcon,
   SparklesIcon,
   UserGroupIcon
@@ -16,6 +17,7 @@ type IconName =
   | "Content"
   | "Email"
   | "Analytics"
+  | "Web"
   | "SparklesIcon"
   | string;
 
@@ -27,6 +29,7 @@ export function resolveIcon(name: IconName): ElementType {
     Content: DocumentTextIcon,
     Email: EnvelopeIcon,
     Analytics: ChartBarIcon,
+    Web: GlobeAltIcon,
     SparklesIcon: SparklesIcon
   };
 
