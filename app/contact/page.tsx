@@ -41,7 +41,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 className="font-semibold text-primary dark:text-white">Office</h4>
-                <p>902 Market Street, San Francisco, CA</p>
+                <p>Hyderabad</p>
               </div>
               <div>
                 <h4 className="font-semibold text-primary dark:text-white">Office hours</h4>

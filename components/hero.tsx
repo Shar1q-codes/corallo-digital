@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+import { Badge } from "@/components/badge";
 import { Button } from "@/components/button";
 
 const heroVariants = {
@@ -24,12 +25,15 @@ export function Hero() {
           <p className="text-xs font-semibold uppercase tracking-[0.4em] text-slate-400">
             Full-funnel digital marketing studio
           </p>
+          <Badge className="mt-6 w-fit bg-emerald-500/10 text-emerald-200 ring-1 ring-emerald-400/40">
+            Built for scaling small businesses
+          </Badge>
           <h1 className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Turn curiosity into compound growth.
           </h1>
           <p className="mt-6 max-w-xl text-lg text-slate-300">
-            We help modern brands orchestrate paid, organic, and lifecycle programs that work as hard as your product.
-            Every experiment ships with performance analytics so you can scale confidently.
+            We help small businesses orchestrate paid, organic, and lifecycle programs that work as hard as your
+            product. Every experiment ships with performance analytics so you can scale confidently.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Button href="/contact" size="lg">
