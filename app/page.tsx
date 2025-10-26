@@ -9,7 +9,6 @@ import { Reveal } from "@/components/reveal";
 import { SectionHeader } from "@/components/section-header";
 import { ServiceCard } from "@/components/service-card";
 import { TestimonialsCarousel } from "@/components/testimonials-carousel";
-import { Stat } from "@/components/stat";
 import { createMetadata } from "@/lib/seo";
 import { getAllCaseStudies, getAllServices, getLatestBlogPosts } from "@/lib/content";
 
@@ -47,6 +46,29 @@ export default async function HomePage() {
     }
   ];
 
+  const differentiators = [
+    {
+      title: "Strategy embedded in your team",
+      description:
+        "We align channel plans with your internal rituals so every launch, sprint, and retro ladders up to shared priorities."
+    },
+    {
+      title: "Experimentation with accountability",
+      description:
+        "Test roadmaps include goals, owners, and instrumentation - no vanity projections, just clear learning agendas."
+    },
+    {
+      title: "Creative and analytics in one loop",
+      description:
+        "Design, copy, and measurement collaborate from day one to keep messaging, data, and insights continuously in sync."
+    },
+    {
+      title: "Transparent performance rhythms",
+      description:
+        "Weekly working sessions focus on what shipped, what we learned, and the next most leveraged moves for your funnel."
+    }
+  ];
+
   const featuredStudies = studies.slice(0, 3);
 
   return (
@@ -76,25 +98,21 @@ export default async function HomePage() {
             <SectionHeader
               eyebrow="Differentiators"
               title="What sets Corallo apart"
-              description="Operational rigor, deep channel expertise, and a partner mindset keep every experiment aligned with your north-star metrics."
-            />
+          description="Operational rigor, deep channel expertise, and a partner mindset keep every experiment aligned with your north-star metrics."
+        />
+      </Reveal>
+      <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        {differentiators.map((item) => (
+          <Reveal key={item.title}>
+            <Card variant="outline" className="h-full space-y-3">
+              <h3 className="text-xl font-semibold text-white">{item.title}</h3>
+              <p className="text-sm text-slate-300">{item.description}</p>
+            </Card>
           </Reveal>
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <Reveal>
-              <Stat label="Average conversion lift">+42%</Stat>
-            </Reveal>
-            <Reveal>
-              <Stat label="Campaigns per year">120+</Stat>
-            </Reveal>
-            <Reveal>
-              <Stat label="Specialists on deck">15+</Stat>
-            </Reveal>
-            <Reveal>
-              <Stat label="Average retention">28 months</Stat>
-            </Reveal>
-          </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </section>
 
       <section className="container mx-auto px-6 py-24 lg:px-8">
         <Reveal>
@@ -125,15 +143,7 @@ export default async function HomePage() {
                   <div className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">{study.client}</div>
                   <h3 className="text-xl font-semibold text-primary dark:text-white">{study.title}</h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300">{study.summary}</p>
-                  <ul className="mt-auto space-y-2 text-sm text-slate-600 dark:text-slate-300">
-                    {study.metrics.map((metric) => (
-                      <li key={metric.label} className="flex items-center justify-between">
-                        <span>{metric.label}</span>
-                        <span className="font-semibold text-primary dark:text-white">{metric.value}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button href={`/work#${study.slug}`} variant="ghost" className="justify-center">
+                  <Button href={`/work#${study.slug}`} variant="ghost" className="mt-auto justify-center">
                     View project
                   </Button>
                 </div>
@@ -175,7 +185,7 @@ export default async function HomePage() {
           <Reveal>
             <PricingCard
               name="Starter"
-              price="$6k/mo"
+              price="₹45,000/mo"
               description="Perfect for seed to Series A teams establishing growth foundations."
               highlights={["Growth roadmap & diagnostics", "One primary channel", "Weekly standups"]}
             />
@@ -183,7 +193,7 @@ export default async function HomePage() {
           <Reveal>
             <PricingCard
               name="Growth"
-              price="$12k/mo"
+              price="₹80,000/mo"
               description="Multi-channel management with embedded experimentation squad."
               highlights={["Integrated paid + lifecycle", "Creative testing sprints", "Experiment backlog management"]}
               featured
@@ -192,7 +202,7 @@ export default async function HomePage() {
           <Reveal>
             <PricingCard
               name="Scale"
-              price="$18k/mo"
+              price="₹1,20,000/mo"
               description="Enterprise-grade support with analytics automation and GTM advisory."
               highlights={["Full funnel ownership", "Analytics & attribution hub", "Executive enablement"]}
             />

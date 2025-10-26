@@ -10,9 +10,9 @@ interface CardProps extends ComponentPropsWithoutRef<"div"> {
 
 export function Card({ children, variant = "default", className, ...props }: CardProps) {
   const variants: Record<CardVariant, string> = {
-    default: "bg-white shadow-soft dark:bg-slate-900",
-    outline: "border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900",
-    inset: "bg-slate-900 text-white dark:bg-slate-800"
+    default: "bg-slate-900 shadow-soft",
+    outline: "border border-slate-800 bg-slate-900",
+    inset: "bg-slate-800 text-white"
   };
 
   return (

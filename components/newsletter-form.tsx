@@ -36,7 +36,7 @@ export function NewsletterForm({ className }: { className?: string }) {
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           placeholder="you@example.com"
-          className="h-12 flex-1 rounded-full border border-slate-200 bg-white px-4 text-sm text-slate-900 shadow-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
+          className="h-12 flex-1 rounded-full border border-slate-700 bg-slate-900 px-4 text-sm text-slate-100 shadow-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           required
         />
         <Button type="submit" className="h-12 px-6">
@@ -48,7 +48,7 @@ export function NewsletterForm({ className }: { className?: string }) {
           role={status === "error" ? "alert" : "status"}
           className={cn(
             "text-sm",
-            status === "error" ? "text-red-600 dark:text-red-400" : "text-green-600 dark:text-green-400"
+            status === "error" ? "text-red-400" : "text-green-400"
           )}
         >
           {message}

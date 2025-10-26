@@ -69,12 +69,12 @@ export default function AboutPage() {
           </Card>
         </Reveal>
         <Reveal>
-          <Card variant="default" className="space-y-4 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-900">
-            <h3 className="text-lg font-semibold text-primary dark:text-white">By the numbers</h3>
-            <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-300">
-              <li><strong className="text-primary dark:text-white">25</strong> specialists spanning strategy, creative, and analytics</li>
-              <li><strong className="text-primary dark:text-white">18</strong> global markets launched in the last 24 months</li>
-              <li><strong className="text-primary dark:text-white">8</strong> average experiments shipped per month per client</li>
+          <Card variant="default" className="space-y-4 bg-gradient-to-b from-slate-900 to-slate-900">
+            <h3 className="text-lg font-semibold text-white">How we partner</h3>
+            <ul className="space-y-3 text-sm text-slate-300">
+              <li>Embedded operating rhythm that mirrors your internal standups, retros, and planning cadences.</li>
+              <li>Cross-functional pod covering strategy, creative, media, and data without bolting on extra vendors.</li>
+              <li>Quarterly reviews focused on learnings, resourcing, and the next most impactful experiments.</li>
             </ul>
           </Card>
         </Reveal>
