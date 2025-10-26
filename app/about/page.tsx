@@ -25,27 +25,6 @@ const values = [
   }
 ];
 
-const team = [
-  {
-    name: "Avery Johnson",
-    role: "Founder & Chief Strategist",
-    bio: "Leads integrated growth strategy with 12+ years scaling SaaS and ecommerce brands.",
-    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    name: "Jordan Smith",
-    role: "Director of Performance Media",
-    bio: "Owns media mix modeling, experimentation, and budget governance across platforms.",
-    image: "https://images.unsplash.com/photo-1551836022-b069fceaf158?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    name: "Elena Park",
-    role: "Head of Lifecycle & CRM",
-    bio: "Designs lifecycle journeys and revenue operations that retain and delight customers.",
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=400&q=80"
-  }
-];
-
 export default function AboutPage() {
   return (
     <div className="container mx-auto px-6 py-24 lg:px-8">
@@ -92,29 +71,6 @@ export default function AboutPage() {
         </div>
       </Reveal>
 
-      <Reveal className="mt-16">
-        <SectionHeader eyebrow="Team" title="Leadership" />
-        <div className="mt-8 grid gap-8 md:grid-cols-3">
-          {team.map((member) => (
-            <Card key={member.name} variant="outline" className="space-y-4">
-              <div className="relative h-56 overflow-hidden rounded-2xl">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-              <div className="space-y-1">
-                <h4 className="text-lg font-semibold text-primary dark:text-white">{member.name}</h4>
-                <p className="text-sm text-accent">{member.role}</p>
-              </div>
-              <p className="text-sm text-slate-600 dark:text-slate-300">{member.bio}</p>
-            </Card>
-          ))}
-        </div>
-      </Reveal>
     </div>
   );
 }
