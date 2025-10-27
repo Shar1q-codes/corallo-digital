@@ -5,6 +5,7 @@ import { ReactNode } from 'react';
 
 import { Footer } from '@/components/footer';
 import { NavBar } from '@/components/nav-bar';
+import { WhatsAppWidget } from '@/components/whatsapp-widget';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://corallo-digital.example.com'),
@@ -56,6 +57,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {children}
         </main>
         <Footer />
+        <WhatsAppWidget
+          phone="919398219300"
+          message="Hi Corallo Digital team, I would love to discuss a growth marketing engagement."
+        />
       </body>
     </html>
   );

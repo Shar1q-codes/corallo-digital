@@ -39,3 +39,150 @@ textarea:focus-visible {
 ::selection {
   background: rgba(59, 130, 246, 0.2);
 }
+
+.wa-widget {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.wa-card {
+  background: #0b141a;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 0.75rem;
+  width: 18rem;
+  box-shadow: 0 20px 45px -18px rgba(0, 0, 0, 0.55);
+}
+
+.wa-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.85rem;
+}
+
+.wa-logo {
+  display: inline-flex;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.wa-title {
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+
+.wa-status {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.wa-header-copy {
+  flex: 1;
+}
+
+.wa-close {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.wa-close:hover {
+  color: #ffffff;
+}
+
+.wa-subtitle {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.75rem;
+}
+
+.wa-cta {
+  display: inline-block;
+  background: #25d366;
+  color: #0b141a;
+  font-weight: 600;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  text-align: center;
+}
+
+.wa-bubble {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 0.85rem;
+}
+
+.wa-form {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.wa-input {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 0.75rem;
+  padding: 0.65rem 0.75rem;
+  color: #ffffff;
+  resize: none;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.wa-input:focus {
+  outline: none;
+  border-color: rgba(37, 211, 102, 0.7);
+  box-shadow: 0 0 0 2px rgba(37, 211, 102, 0.2);
+}
+
+.wa-send {
+  justify-self: end;
+  background: #25d366;
+  color: #0b141a;
+  font-weight: 600;
+  border: none;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.wa-send:hover {
+  filter: brightness(1.05);
+}
+
+.wa-button {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: #25d366;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 15px 35px -12px rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s ease;
+}
+
+.wa-button:hover {
+  transform: translateY(-2px);
+}
+
+.wa-button-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+}
