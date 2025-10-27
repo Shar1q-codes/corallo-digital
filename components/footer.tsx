@@ -38,9 +38,7 @@ export function Footer() {
               Modern digital marketing for ambitious brands. Strategy, creative, and analytics working together.
             </p>
             <div className="space-y-1 text-sm text-slate-300">
-              <p>902 Market Street</p>
-              <p>San Francisco, CA 94103</p>
-              <p>+1 (415) 555-1234</p>
+              <p>Hyderabad</p>
             </div>
           </div>
           <div className="grid gap-8 sm:grid-cols-3 lg:col-span-2">

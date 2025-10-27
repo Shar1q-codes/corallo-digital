@@ -55,25 +55,22 @@ export function ContactForm({ className }: { className?: string }) {
 
     setErrors({});
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(result.data)
-      });
+    const mailtoSubject = "New project inquiry";
+    const mailtoBody = [
+      `Name: ${result.data.name}`,
+      `Email: ${result.data.email}`,
+      `Company: ${result.data.company ?? "n/a"}`,
+      `Website: ${result.data.website ?? "n/a"}`,
+      "",
+      result.data.message
+    ].join("\n");
 
-      if (!response.ok) {
-        throw new Error("Failed to send");
-      }
+    setStatus("success");
+    setFeedback("Thanks! Your email client should open. If it doesn't, email us at hello@corallodigital.com.");
+    setFormState({ name: "", email: "", company: "", website: "", message: "" });
 
-      console.info("Contact submission", result.data);
-      setStatus("success");
-      setFeedback("Thanks! A strategist will reach out within one business day.");
-      setFormState({ name: "", email: "", company: "", website: "", message: "" });
-    } catch (error) {
-      console.error(error);
-      setStatus("error");
-      setFeedback("Something went wrong. Please try again shortly.");
+    if (typeof window !== "undefined") {
+      window.location.href = `mailto:hello@corallodigital.com?subject=${encodeURIComponent(mailtoSubject)}&body=${encodeURIComponent(mailtoBody)}`;
     }
   };
 
