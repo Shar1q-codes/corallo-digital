@@ -63,7 +63,7 @@ export function Footer() {
                 </h4>
                 <ul className="space-y-2 text-sm text-secondary">
                   {items.map((item) => (
-                    <li key={item.href}>
+                    <li key={`${group}-${item.label}`}>
                       <Link className="group relative inline-flex items-center gap-2 leading-relaxed transition hover:text-primary" href={item.href}>
                         <span>{item.label}</span>
                         <span className="h-px w-6 bg-gradient-to-r from-primary/30 to-secondary/40 opacity-0 transition group-hover:opacity-100" />

@@ -15,7 +15,9 @@ const textVariants = {
   })
 };
 
-const shimmerTransition = {
+import type { Transition } from "framer-motion";
+
+const shimmerTransition: Transition = {
   duration: 6,
   repeat: Infinity,
   repeatType: "mirror",
@@ -129,47 +131,7 @@ export function Hero() {
               />
             </div>
 
-            <motion.div
-              className="absolute -right-10 -top-12 hidden w-[240px] rounded-3xl border border-white/70 bg-white/90 p-6 shadow-strong backdrop-blur lg:block"
-              animate={
-                prefersReducedMotion
-                  ? undefined
-                  : { y: ["-8%", "0%", "-8%"] }
-              }
-              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <p className="text-sm font-semibold text-primary">Active experiments</p>
-              <ul className="mt-4 space-y-2 text-xs text-secondary">
-                <li className="flex items-center justify-between">
-                  Paid social creative <span className="font-semibold text-primary">+42%</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  Lifecycle journey <span className="font-semibold text-primary">+31%</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  Analytics instrumentation <span className="font-semibold text-primary">Live</span>
-                </li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              className="absolute -left-14 bottom-[-12%] hidden w-[220px] rounded-3xl border border-white/60 bg-gradient-to-br from-accent/20 via-white/70 to-secondary/20 p-6 shadow-strong backdrop-blur lg:flex lg:flex-col lg:gap-3"
-              animate={
-                prefersReducedMotion
-                  ? undefined
-                  : { y: ["6%", "0%", "6%"], scale: [1, 1.02, 1] }
-              }
-              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-muted">
-                Last sprint
-              </p>
-              <div className="space-y-2 text-sm text-secondary">
-                <p>17 experiments shipped</p>
-                <p>6 audience insights unlocked</p>
-                <p>4 cross-channel plays activated</p>
-              </div>
-            </motion.div>
+            {/* Floating cards intentionally hidden for now */}
           </div>
         </motion.div>
       </div>

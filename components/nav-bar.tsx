@@ -48,9 +48,10 @@ export function NavBar() {
   const linkItems = useMemo(
     () =>
       links.map((link) => {
+        const currentPath = pathname ?? "/";
         const active =
-          pathname === link.href ||
-          (link.href !== "/" && pathname.startsWith(link.href));
+          currentPath === link.href ||
+          (link.href !== "/" && currentPath.startsWith(link.href));
 
         return (
           <Link
@@ -133,9 +134,10 @@ export function NavBar() {
         <nav className="border-t border-[var(--color-border)] bg-surface px-6 py-6 shadow-soft" aria-label="Mobile navigation">
           <ul className="space-y-4">
             {links.map((link) => {
+              const currentPath = pathname ?? "/";
               const active =
-                pathname === link.href ||
-                (link.href !== "/" && pathname.startsWith(link.href));
+                currentPath === link.href ||
+                (link.href !== "/" && currentPath.startsWith(link.href));
               return (
                 <li key={link.href}>
                   <Link
