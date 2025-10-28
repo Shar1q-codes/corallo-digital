@@ -1,6 +1,6 @@
 ---
 title: "Analytics & Attribution"
-summary: "Build a marketing intelligence layer that clarifies what''s working and why."
+summary: "Build a marketing intelligence layer that clarifies what's working and why."
 icon: "Analytics"
 order: 6
 bullets:
@@ -19,7 +19,7 @@ faq:
 
 Our analytics specialists bridge marketing and data teams. We create a unified taxonomy, align KPIs, and ensure teams have real-time access to insights. Whether you need a foundational dashboard or advanced attribution modeling, we design the workflows and documentation for long-term success.
 
-## What''s included
+## What's included
 
 - KPI alignment workshops
 - Dashboard and report creation

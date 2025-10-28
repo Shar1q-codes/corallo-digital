@@ -4,6 +4,7 @@ import { useState } from "react";
 import { z } from "zod";
 
 import { Button } from "@/components/button";
+import { Input } from "@/components/input";
 import { cn } from "@/lib/utils";
 
 const contactSchema = z.object({
@@ -74,76 +75,49 @@ export function ContactForm({ className }: { className?: string }) {
     }
   };
 
-  const fieldClass = (field: string) =>
-    cn(
-      "h-12 w-full rounded-2xl border border-slate-200 bg-white px-4 text-sm text-slate-900 shadow-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100",
-      errors[field] && "border-red-500 focus-visible:ring-red-500"
-    );
-
   return (
     <form onSubmit={handleSubmit} className={cn("space-y-6", className)} noValidate>
       <div className="grid gap-4 sm:grid-cols-2">
-        <div>
-          <label htmlFor="name" className="mb-2 block text-xs font-semibold uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
-            Name
-          </label>
-          <input
-            id="name"
-            name="name"
-            value={formState.name}
-            onChange={handleChange}
-            className={fieldClass("name")}
-            autoComplete="name"
-            required
-          />
-          {errors.name ? <p className="mt-2 text-xs text-red-500" role="alert">{errors.name}</p> : null}
-        </div>
-        <div>
-          <label htmlFor="email" className="mb-2 block text-xs font-semibold uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
-            Email
-          </label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            value={formState.email}
-            onChange={handleChange}
-            className={fieldClass("email")}
-            autoComplete="email"
-            required
-          />
-          {errors.email ? <p className="mt-2 text-xs text-red-500" role="alert">{errors.email}</p> : null}
-        </div>
-        <div>
-          <label htmlFor="company" className="mb-2 block text-xs font-semibold uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
-            Company
-          </label>
-          <input
-            id="company"
-            name="company"
-            value={formState.company}
-            onChange={handleChange}
-            className={fieldClass("company")}
-            autoComplete="organization"
-          />
-        </div>
-        <div>
-          <label htmlFor="website" className="mb-2 block text-xs font-semibold uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
-            Website
-          </label>
-          <input
-            id="website"
-            name="website"
-            value={formState.website}
-            onChange={handleChange}
-            className={fieldClass("website")}
-            placeholder="https://"
-          />
-          {errors.website ? <p className="mt-2 text-xs text-red-500" role="alert">{errors.website}</p> : null}
-        </div>
+        <Input
+          label="Name"
+          name="name"
+          value={formState.name}
+          onChange={handleChange}
+          autoComplete="name"
+          required
+          placeholder="Hi, I'm..."
+          error={errors.name}
+        />
+        <Input
+          label="Email"
+          name="email"
+          type="email"
+          value={formState.email}
+          onChange={handleChange}
+          autoComplete="email"
+          required
+          placeholder="you@company.com"
+          error={errors.email}
+        />
+        <Input
+          label="Company"
+          name="company"
+          value={formState.company}
+          onChange={handleChange}
+          autoComplete="organization"
+          placeholder="Company or team"
+        />
+        <Input
+          label="Website"
+          name="website"
+          value={formState.website}
+          onChange={handleChange}
+          placeholder="https://"
+          error={errors.website}
+        />
       </div>
       <div>
-        <label htmlFor="message" className="mb-2 block text-xs font-semibold uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
+        <label htmlFor="message" className="mb-2 block text-xs font-semibold uppercase tracking-[0.3em] text-muted">
           Project details
         </label>
         <textarea
@@ -153,12 +127,13 @@ export function ContactForm({ className }: { className?: string }) {
           value={formState.message}
           onChange={handleChange}
           className={cn(
-            "w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100",
-            errors.message && "border-red-500 focus-visible:ring-red-500"
+            "w-full rounded-2xl border border-[var(--color-border)] bg-surface px-4 py-3 text-sm text-primary-800 shadow-soft/0 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]",
+            errors.message && "border-danger focus-visible:ring-danger"
           )}
           required
+          placeholder="Tell us about your growth goals, current experiments, or biggest blockers..."
         />
-        {errors.message ? <p className="mt-2 text-xs text-red-500" role="alert">{errors.message}</p> : null}
+        {errors.message ? <p className="mt-2 text-xs text-danger" role="alert">{errors.message}</p> : null}
       </div>
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <Button type="submit" className="w-full sm:w-auto" disabled={status === "submitting"}>
@@ -168,7 +143,7 @@ export function ContactForm({ className }: { className?: string }) {
           <p
             className={cn(
               "text-sm",
-              status === "success" ? "text-green-600 dark:text-green-400" : "text-red-600 dark:text-red-400"
+              status === "success" ? "text-success" : "text-danger"
             )}
             role="status"
           >

@@ -19,7 +19,7 @@ faq:
 
 Every social program starts with qualitative research and audience interviews. We craft messaging territories, creative treatments, and publishing cadences tailored to each platform. Paid and organic efforts are synchronized to amplify launches, product education, and social proof.
 
-## What''s included
+## What's included
 
 - Channel health audit and roadmap
 - Asset production across motion, static, and copy

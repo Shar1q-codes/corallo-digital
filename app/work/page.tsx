@@ -20,8 +20,8 @@ export default function WorkPage() {
         />
       </Reveal>
       <Reveal className="mt-16">
-        <Card variant="outline" className="space-y-6">
-          <p className="text-base text-slate-300">
+        <Card tone="muted" elevated className="space-y-6">
+          <p className="text-base text-secondary">
             We're heads down building launch programs right now, so we don't have public case studies just yet. If you'd
             like to see how we can support your next chapter, let's start with a working session.
           </p>

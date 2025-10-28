@@ -61,6 +61,20 @@ lib/
   utils.ts           # UI utilities
 ```
 
+## Design system tokens
+
+- Palette and elevation tokens live in `src/styles/theme.css`; Tailwind consumes them through `tailwind.config.js` so utilities like `bg-surface`, `text-secondary`, `bg-hero-1`, and `shadow-soft` always reference the latest values.
+- UI primitives (`components/button.tsx`, `components/badge.tsx`, `components/card.tsx`, `components/input.tsx`, `components/link.tsx`) are wired to the tokens and expose fully fleshed states (hover, focus-visible, active, disabled, pressed).
+- Explore every state on `/src/pages/ThemeShowcase.tsx`, which renders swatches, gradients, components, and a live light/dark switch.
+- To programmatically toggle dark mode, add or remove the `dark` class on `document.documentElement` (Next’s theme provider already respects this):
+
+  ```ts
+  const root = document.documentElement;
+  root.classList.toggle("dark");
+  ```
+
+  Surfaces and text will automatically restyle thanks to the CSS variables defined in `theme.css`.
+
 ## Content model
 
 - **Services**: `/content/services/*.md` with frontmatter fields for title, summary, bullets, and FAQs.

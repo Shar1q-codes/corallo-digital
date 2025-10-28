@@ -15,21 +15,28 @@ interface PricingCardProps {
 export function PricingCard({ name, price, description, highlights, featured = false }: PricingCardProps) {
   return (
     <Card
-      variant={featured ? "default" : "outline"}
+      tone={featured ? "vibrant" : "muted"}
+      elevated
       className={cn(
         "flex h-full flex-col gap-6",
-        featured && "border border-accent/30 bg-gradient-to-b from-slate-900 to-slate-800"
+        featured && "bg-gradient-sunrise text-inverse shadow-strong"
       )}
     >
       <div className="space-y-3">
-        <h3 className="text-xl font-semibold text-white">{name}</h3>
-        <p className="text-4xl font-semibold text-white">{price}</p>
-        <p className="text-sm text-slate-300">{description}</p>
+        <h3 className={cn("text-xl font-semibold", featured ? "text-inverse" : "text-primary")}>{name}</h3>
+        <p className={cn("text-4xl font-semibold", featured ? "text-inverse" : "text-primary")}>{price}</p>
+        <p className={cn("text-sm", featured ? "text-inverse/80" : "text-secondary")}>{description}</p>
       </div>
-      <ul className="space-y-3 text-sm text-slate-300">
+      <ul className={cn("space-y-3 text-sm", featured ? "text-inverse/85" : "text-secondary")}>
         {highlights.map((highlight) => (
           <li key={highlight} className="flex items-start gap-2">
-            <CheckCircleIcon className="mt-0.5 h-4 w-4 text-accent" aria-hidden="true" />
+            <CheckCircleIcon
+              className={cn(
+                "mt-0.5 h-4 w-4",
+                featured ? "text-inverse" : "text-accent"
+              )}
+              aria-hidden="true"
+            />
             <span>{highlight}</span>
           </li>
         ))}

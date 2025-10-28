@@ -27,16 +27,16 @@ export function SectionHeader({
       )}
     >
       {eyebrow ? (
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted">
           {eyebrow}
         </p>
       ) : null}
       <div className="space-y-3">
-        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
           {title}
         </h2>
         {description ? (
-          <p className="text-base text-slate-300 sm:text-lg">
+          <p className="text-base text-secondary sm:text-lg">
             {description}
           </p>
         ) : null}

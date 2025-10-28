@@ -31,16 +31,16 @@ export function TestimonialsCarousel({ testimonials }: TestimonialsCarouselProps
     <section aria-label="Testimonials" className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="space-y-1">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted">
             Testimonials
           </p>
-          <h3 className="text-2xl font-semibold text-white">What our partners say</h3>
+          <h3 className="text-2xl font-semibold text-primary">What our partners say</h3>
         </div>
         <div className="hidden gap-3 sm:flex">
           <button
             type="button"
             onClick={() => goTo("prev")}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-700 text-slate-300 transition hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border)] text-secondary transition hover:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)]"
             aria-label="Show previous testimonial"
           >
             <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
@@ -48,7 +48,7 @@ export function TestimonialsCarousel({ testimonials }: TestimonialsCarouselProps
           <button
             type="button"
             onClick={() => goTo("next")}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-700 text-slate-300 transition hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border)] text-secondary transition hover:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)]"
             aria-label="Show next testimonial"
           >
             <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
@@ -74,7 +74,7 @@ export function TestimonialsCarousel({ testimonials }: TestimonialsCarouselProps
               type="button"
               onClick={() => setIndex(i)}
               className={`h-2 w-6 rounded-full transition ${
-                i === index ? "bg-accent" : "bg-slate-700"
+                i === index ? "bg-accent" : "bg-muted opacity-40"
               }`}
               aria-label={`Show testimonial from ${item.name}`}
               aria-pressed={i === index}
