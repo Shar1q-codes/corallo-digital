@@ -40,7 +40,7 @@ export function TestimonialsCarousel({ testimonials }: TestimonialsCarouselProps
           <button
             type="button"
             onClick={() => goTo("prev")}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border)] text-secondary transition hover:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)]"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border)] text-secondary transition hover:bg-surface-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)]"
             aria-label="Show previous testimonial"
           >
             <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
@@ -48,7 +48,7 @@ export function TestimonialsCarousel({ testimonials }: TestimonialsCarouselProps
           <button
             type="button"
             onClick={() => goTo("next")}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border)] text-secondary transition hover:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)]"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-border)] text-secondary transition hover:bg-surface-elevated focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)]"
             aria-label="Show next testimonial"
           >
             <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />

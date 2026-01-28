@@ -14,7 +14,7 @@ import { Input } from "@/components/input";
 import { Link } from "@/components/link";
 
 const brandSwatches = [
-  { name: "Primary", token: "--color-primary", className: "bg-primary-400" },
+  { name: "Primary", token: "--color-primary", className: "bg-primary" },
   { name: "Secondary", token: "--color-secondary", className: "bg-secondary" },
   { name: "Accent", token: "--color-accent", className: "bg-accent" },
   { name: "Dark", token: "--color-dark", className: "bg-dark" },
@@ -22,7 +22,7 @@ const brandSwatches = [
   { name: "Muted", token: "--color-muted", className: "bg-[var(--color-muted)]" },
   { name: "Success", token: "--color-success", className: "bg-success" },
   { name: "Warning", token: "--color-warning", className: "bg-warning" },
-  { name: "Danger", token: "--color-danger", className: "bg-danger" },
+  { name: "Error", token: "--color-error", className: "bg-danger" },
   { name: "Info", token: "--color-info", className: "bg-info" }
 ];
 
@@ -56,14 +56,14 @@ export default function ThemeShowcase() {
   );
 
   return (
-    <main className="min-h-screen bg-bg pb-24 text-primary-800">
+    <main className="min-h-screen bg-bg pb-24 text-primary">
       <div className="mx-auto max-w-6xl space-y-16 px-6 pt-20 sm:px-10 lg:px-12">
         <header className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-secondary">
               Vibrant Creative System
             </p>
-            <h1 className="mt-2 text-4xl font-bold text-primary-800 dark:text-primary-100">
+            <h1 className="mt-2 text-4xl font-bold text-primary dark:text-primary">
               Theme Showcase
             </h1>
             <p className="mt-3 max-w-2xl text-secondary">
@@ -82,7 +82,7 @@ export default function ThemeShowcase() {
         </header>
 
         <section className="space-y-6">
-          <h2 className="text-2xl font-semibold text-primary-800 dark:text-primary-100">
+          <h2 className="text-2xl font-semibold text-primary dark:text-primary">
             Brand Swatches
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
@@ -93,7 +93,7 @@ export default function ThemeShowcase() {
                   aria-hidden="true"
                 />
                 <div className="mt-4 space-y-1">
-                  <p className="text-sm font-semibold text-primary-800 dark:text-primary-100">
+                  <p className="text-sm font-semibold text-primary dark:text-primary">
                     {swatch.name}
                   </p>
                   <p className="text-xs font-medium text-secondary">
@@ -106,7 +106,7 @@ export default function ThemeShowcase() {
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-2xl font-semibold text-primary-800 dark:text-primary-100">
+          <h2 className="text-2xl font-semibold text-primary dark:text-primary">
             Buttons
           </h2>
           <div className="grid gap-8 lg:grid-cols-2">
@@ -134,7 +134,7 @@ export default function ThemeShowcase() {
               </CardFooter>
             </Card>
             <Card tone="vibrant" elevated className="space-y-6">
-              <CardHeader className="text-primary-800">
+              <CardHeader className="text-primary">
                 <CardTitle>Marketing CTA</CardTitle>
                 <CardDescription>
                   Large, high-impact button with gradient fill, uppercase tracking, and glow shadow.
@@ -155,7 +155,7 @@ export default function ThemeShowcase() {
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-2xl font-semibold text-primary-800 dark:text-primary-100">
+          <h2 className="text-2xl font-semibold text-primary dark:text-primary">
             Badges &amp; Links
           </h2>
           <div className="grid gap-8 lg:grid-cols-2">
@@ -180,7 +180,7 @@ export default function ThemeShowcase() {
                 <Link href="#always" underline="always">
                   Always underlined link style
                 </Link>
-                <Link href="#none" underline="none" className="text-primary-700 hover:text-primary-600">
+                <Link href="#none" underline="none" className="text-primary hover:text-secondary">
                   Minimal link with custom color
                 </Link>
               </CardBody>
@@ -189,7 +189,7 @@ export default function ThemeShowcase() {
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-2xl font-semibold text-primary-800 dark:text-primary-100">
+          <h2 className="text-2xl font-semibold text-primary dark:text-primary">
             Inputs
           </h2>
           <div className="grid gap-6 lg:grid-cols-2">
@@ -213,7 +213,7 @@ export default function ThemeShowcase() {
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-2xl font-semibold text-primary-800 dark:text-primary-100">
+          <h2 className="text-2xl font-semibold text-primary dark:text-primary">
             Cards
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
@@ -262,7 +262,7 @@ export default function ThemeShowcase() {
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-2xl font-semibold text-primary-800 dark:text-primary-100">
+          <h2 className="text-2xl font-semibold text-primary dark:text-primary">
             Gradients
           </h2>
           <div className="grid gap-6 lg:grid-cols-3">

@@ -127,7 +127,7 @@ export function ContactForm({ className }: { className?: string }) {
           value={formState.message}
           onChange={handleChange}
           className={cn(
-            "w-full rounded-2xl border border-[var(--color-border)] bg-surface px-4 py-3 text-sm text-primary-800 shadow-soft/0 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]",
+            "w-full rounded-2xl border border-[var(--color-border)] bg-surface px-4 py-3 text-sm text-primary shadow-soft/0 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]",
             errors.message && "border-danger focus-visible:ring-danger"
           )}
           required

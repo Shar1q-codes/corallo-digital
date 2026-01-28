@@ -26,55 +26,29 @@ module.exports = {
         body: ["var(--font-body)", "Work Sans", "sans-serif"]
       },
       colors: {
-        primary: {
-          DEFAULT: "var(--color-primary)",
-          50: "#ffe6e2",
-          100: "#ffd3cc",
-          200: "#ffb0a3",
-          300: "#ff8c7b",
-          400: "#ff6f61",
-          500: "#f74f41",
-          600: "#d13e32",
-          700: "#a92f25",
-          800: "#7f2119",
-          900: "#55150f"
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
+        accent: "var(--color-accent)",
+        bg: "var(--color-bg)",
+        surface: "var(--color-surface)",
+        elevated: "var(--color-surface-elevated)",
+        muted: "var(--color-muted)",
+        border: "var(--color-border)",
+        text: {
+          primary: "var(--text-primary)",
+          secondary: "var(--text-secondary)",
+          muted: "var(--text-muted)",
+          inverse: "var(--text-inverse)"
         },
-        secondary: {
-          DEFAULT: "var(--color-secondary)"
-        },
-        accent: {
-          DEFAULT: "var(--color-accent)"
-        },
-        bg: {
-          DEFAULT: "var(--color-bg)"
-        },
-        surface: {
-          DEFAULT: "var(--color-surface)"
-        },
-        muted: {
-          DEFAULT: "var(--color-muted)"
-        },
-        success: {
-          DEFAULT: "var(--color-success)"
-        },
-        warning: {
-          DEFAULT: "var(--color-warning)"
-        },
-        danger: {
-          DEFAULT: "var(--color-danger)"
-        },
-        info: {
-          DEFAULT: "var(--color-info)"
-        },
-        dark: {
-          DEFAULT: "var(--color-dark)"
-        },
-        light: {
-          DEFAULT: "var(--color-light)"
-        }
+        success: "var(--color-success)",
+        warning: "var(--color-warning)",
+        error: "var(--color-error)",
+        info: "var(--color-info)",
+        ring: "var(--ring)"
       },
       boxShadow: {
         soft: "var(--shadow-soft)",
+        md: "var(--shadow-md)",
         strong: "var(--shadow-strong)",
         glow: "var(--shadow-glow)"
       },
@@ -101,6 +75,7 @@ module.exports = {
         ".text-inverse": { color: "var(--text-inverse)" },
         ".text-primary": { color: "var(--text-primary)" },
         ".text-secondary": { color: "var(--text-secondary)" },
+        ".text-muted": { color: "var(--text-muted)" },
         ".surface": {
           backgroundColor: "var(--color-surface)"
         },

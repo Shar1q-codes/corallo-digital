@@ -21,7 +21,7 @@ export const Link = forwardRef<HTMLAnchorElement, Props>(
       <NextLink
         {...props}
         className={cn(
-          "inline-flex items-center gap-1 text-secondary transition-colors duration-150 hover:text-primary-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]",
+          "inline-flex items-center gap-1 text-secondary transition-colors duration-150 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]",
           underlineClasses,
           className
         )}

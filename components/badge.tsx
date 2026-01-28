@@ -8,7 +8,7 @@ const badgeStyles = cva(
   {
     variants: {
       variant: {
-        subtle: "bg-primary-50 text-primary-700",
+        subtle: "bg-surface-elevated text-primary",
         solid: "bg-secondary text-inverse shadow-soft",
         outline:
           "border border-[var(--color-accent)] text-accent bg-transparent"

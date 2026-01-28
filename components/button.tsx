@@ -16,15 +16,15 @@ const buttonStyles = cva(
     variants: {
       variant: {
         primary:
-          "bg-primary-400 text-inverse shadow-soft hover:bg-primary-500 active:bg-primary-600 hover:shadow-strong",
+          "bg-secondary text-inverse shadow-soft hover:bg-secondary-hover active:bg-secondary-hover hover:shadow-md",
         secondary:
-          "bg-secondary text-inverse shadow-soft hover:brightness-105 active:brightness-95 hover:shadow-strong",
+          "border border-[var(--color-border)] bg-surface text-primary shadow-soft/0 hover:bg-surface-elevated active:bg-surface-elevated",
         accent:
-          "bg-accent text-dark shadow-soft hover:brightness-105 active:brightness-95 hover:shadow-strong",
+          "bg-accent text-inverse shadow-soft hover:bg-accent-hover active:bg-accent-hover hover:shadow-md",
         outline:
-          "border border-[var(--color-border)] bg-transparent text-primary-700 hover:bg-primary-50 active:bg-primary-100",
+          "border border-[var(--color-border)] bg-transparent text-primary hover:bg-surface-elevated active:bg-surface-elevated",
         ghost:
-          "bg-transparent text-secondary hover:bg-primary-50 active:bg-primary-100",
+          "bg-transparent text-secondary hover:bg-surface-elevated active:bg-surface-elevated",
         marketing:
           "bg-gradient-primary text-inverse shadow-glow hover:shadow-strong hover:translate-y-[-1px] active:translate-y-[1px]"
       },
@@ -43,11 +43,11 @@ const buttonStyles = cva(
       },
       {
         variant: ["outline", "ghost"],
-        className: "text-primary-700"
+        className: "text-primary"
       },
       {
         variant: "accent",
-        className: "text-[var(--color-dark)]"
+        className: "text-inverse"
       }
     ],
     defaultVariants: {

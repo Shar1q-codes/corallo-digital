@@ -63,7 +63,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="min-h-screen bg-bg font-body text-[color:var(--text-primary)] transition-colors duration-300">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-6 focus:top-6 focus:z-50 focus:rounded-full focus:bg-primary-400 focus:px-5 focus:py-2 focus:text-inverse focus:shadow-strong"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-6 focus:top-6 focus:z-50 focus:rounded-full focus:bg-secondary focus:px-5 focus:py-2 focus:text-inverse focus:shadow-strong"
         >
           Skip to content
         </a>

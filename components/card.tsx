@@ -15,7 +15,7 @@ interface CardProps extends ComponentPropsWithoutRef<"div"> {
 const toneStyles: Record<CardTone, string> = {
   default: "card",
   vibrant:
-    "card border-primary-100/80 bg-gradient-to-br from-primary-50 via-surface to-surface",
+    "card border-border/80 bg-gradient-to-br from-surface-elevated via-surface to-surface",
   muted:
     "card border-[var(--color-border)] bg-surface text-secondary"
 };
@@ -40,7 +40,7 @@ export function Card({
         break;
       case "inset":
         resolvedTone = "vibrant";
-        legacyClasses.push("bg-primary-50/60");
+        legacyClasses.push("bg-surface-elevated/70");
         break;
       default:
         resolvedTone = tone;

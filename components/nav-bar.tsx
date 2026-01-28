@@ -60,12 +60,12 @@ export function NavBar() {
             href={link.href}
             className={cn(
               'relative text-sm font-medium transition-colors duration-200',
-              'after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:scale-x-0 after:bg-gradient-to-r after:from-primary after:to-secondary after:transition-transform after:duration-300',
-              'hover:text-primary focus-visible:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]',
+              'after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:scale-x-0 after:bg-[color:var(--color-accent)] after:transition-transform after:duration-300',
+              'text-[color:var(--text-inverse)] hover:text-[color:var(--text-inverse)] focus-visible:text-[color:var(--text-inverse)]',
+              'dark:text-[color:var(--text-primary)] dark:hover:text-[color:var(--text-inverse)] dark:focus-visible:text-[color:var(--text-inverse)]',
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]',
               'hover:after:scale-x-100',
-              active
-                ? 'text-primary after:scale-x-100'
-                : 'text-[color:var(--text-secondary)]'
+              active ? 'after:scale-x-100' : undefined
             )}
             aria-current={active ? 'page' : undefined}
           >
@@ -84,14 +84,14 @@ export function NavBar() {
       className={cn(
         'sticky top-0 z-50 transition-all duration-300',
         isScrolled
-          ? 'border-b border-[var(--color-border)] bg-surface/85 backdrop-blur-xl shadow-soft'
-          : 'border-b border-transparent bg-transparent'
+          ? 'border-b border-[color:color-mix(in oklab, var(--text-inverse) 8%, transparent)] bg-[color:var(--color-primary)] backdrop-blur-xl shadow-soft dark:border-[color:var(--color-border)] dark:bg-[color:var(--color-bg)]'
+          : 'border-b border-[color:color-mix(in oklab, var(--text-inverse) 8%, transparent)] bg-[color:var(--color-primary)] dark:border-[color:var(--color-border)] dark:bg-[color:var(--color-bg)]'
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between gap-6 px-6 lg:px-8">
         <Link
           href="/"
-          className="group flex items-center gap-3 text-lg font-semibold text-primary transition-colors duration-300"
+          className="group flex items-center gap-3 text-lg font-semibold text-[color:var(--text-inverse)] transition-colors duration-300 dark:text-[color:var(--text-primary)]"
         >
           <Image
             src="/images/CDS_LOGO.png"
@@ -111,14 +111,14 @@ export function NavBar() {
           <Button
             href="/services"
             variant="ghost"
-            className="hover:translate-y-[-1px]"
+            className="text-[color:var(--text-inverse)] hover:text-[color:var(--text-inverse)] hover:translate-y-[-1px] dark:text-[color:var(--text-primary)] dark:hover:text-[color:var(--text-inverse)]"
           >
             View Services
           </Button>
           <Button
             href="/contact"
             variant="marketing"
-            className="shadow-glow hover:shadow-strong"
+            className="bg-secondary bg-none text-[color:var(--text-inverse)] shadow-glow hover:bg-[color:var(--color-secondary-hover)] hover:shadow-strong"
           >
             Get a Proposal
           </Button>
@@ -126,7 +126,7 @@ export function NavBar() {
         <div className="flex items-center gap-3 lg:hidden">
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-border)] bg-surface/75 text-[color:var(--text-primary)] transition hover:bg-primary-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:color-mix(in oklab, var(--text-inverse) 18%, transparent)] bg-[color:var(--color-primary)] text-[color:var(--text-inverse)] transition hover:text-[color:var(--text-inverse)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)] dark:border-[color:var(--color-border)] dark:bg-[color:var(--color-bg)] dark:text-[color:var(--text-primary)] dark:hover:text-[color:var(--text-inverse)]"
             onClick={() => setIsOpen((prev) => !prev)}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
@@ -150,7 +150,7 @@ export function NavBar() {
         className="overflow-hidden lg:hidden"
       >
         <nav
-          className="border-t border-[var(--color-border)] bg-surface px-6 py-6 shadow-soft"
+          className="border-t border-[color:color-mix(in oklab, var(--text-inverse) 8%, transparent)] bg-[color:var(--color-primary)] px-6 py-6 shadow-soft dark:border-[color:var(--color-border)] dark:bg-[color:var(--color-bg)]"
           aria-label="Mobile navigation"
         >
           <ul className="space-y-4">
@@ -164,10 +164,9 @@ export function NavBar() {
                   <Link
                     href={link.href}
                     className={cn(
-                      'flex items-center justify-between text-base font-medium transition hover:text-primary-600',
-                      active
-                        ? 'text-primary'
-                        : 'text-[color:var(--text-secondary)]'
+                      'flex items-center justify-between text-base font-medium transition',
+                      'text-[color:var(--text-inverse)] hover:text-[color:var(--text-inverse)] dark:text-[color:var(--text-primary)] dark:hover:text-[color:var(--text-inverse)]',
+                      active ? 'text-[color:var(--text-inverse)] dark:text-[color:var(--text-primary)]' : undefined
                     )}
                     aria-current={active ? 'page' : undefined}
                   >

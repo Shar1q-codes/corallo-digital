@@ -1,64 +1,48 @@
-import { AnimatedCounter } from "@/components/animated-counter";
+import { Button } from "@/components/button";
 import { Card } from "@/components/card";
 import { Reveal } from "@/components/reveal";
 import { SectionHeader } from "@/components/section-header";
-import { TestimonialsCarousel } from "@/components/testimonials-carousel";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
   title: "About - Corallo Digital",
-  description: "Learn about Corallo Digital's mission, team, and approach to building modern marketing engines."
+  description:
+    "Corallo Digital builds coherent digital systems across domains, focused on structure, integration, and durable execution.",
 });
 
-const timeline = [
+const principles = [
   {
-    year: "2019",
-    title: "Seed of the studio",
-    copy:
-      "Our founders led growth at venture-backed SaaS companies, experimenting with blended acquisition models and lifecycle systems.",
-    highlight: "Testing grounds"
+    title: "Structure before noise",
+    description:
+      "We prioritize shared language, clear interfaces, and traceable decisions so teams can build with confidence."
   },
   {
-    year: "2021",
-    title: "Embedded operator network",
-    copy:
-      "We built a collective of strategists, data scientists, media buyers, and creatives to operate as unified pods inside scale-ups.",
-    highlight: "Collective assembled"
+    title: "Systems over fragments",
+    description:
+      "Architecture, data, and workflows come first. Surfaces follow the system, not the other way around."
   },
   {
-    year: "2023",
-    title: "Corallo Digital launches",
-    copy:
-      "After shipping more than twenty programs, we launched Corallo to replace fragmented agency relationships with a single growth partner.",
-    highlight: "Studio debut"
-  },
-  {
-    year: "Today",
-    title: "Full-funnel marketing engines",
-    copy:
-      "We plug into go-to-market teams to design demand narratives, accelerate experimentation, and operationalize measurement across the funnel.",
-    highlight: "Continuous momentum"
+    title: "Durable execution",
+    description:
+      "We ship in calm, consistent steps and keep the system legible as it grows and adapts."
   }
 ];
 
-const testimonials = [
+const capabilities = [
   {
-    quote:
-      "Corallo brought the creative rigor and analytical depth we had been missing. In 90 days we unlocked a clear pipeline engine and a confident creative strategy.",
-    name: "Priya Sharma",
-    role: "VP Growth, Northwind"
+    title: "Foundational platforms",
+    description:
+      "Shared cores for identity, data, and governance that keep multiple products aligned."
   },
   {
-    quote:
-      "Their embedded model meant our marketing, product, and analytics teams stood up a shared roadmap. We moved from sporadic experiments to a disciplined testing culture.",
-    name: "Leo Carter",
-    role: "Head of Marketing, HarborTech"
+    title: "Operational tools",
+    description:
+      "Analytics, review, and workflow tooling that make complex systems easier to run."
   },
   {
-    quote:
-      "The Corallo team helped our lifecycle squad reimagine onboarding and retention. Performance metrics improved, and our decision-making rhythm became far clearer.",
-    name: "Maya Ortiz",
-    role: "Lifecycle Lead, Pulse Apparel"
+    title: "Domain products",
+    description:
+      "Focused solutions across domains such as talent, finance, and reporting, designed to connect."
   }
 ];
 
@@ -66,83 +50,277 @@ export default function AboutPage() {
   return (
     <div className="relative isolate overflow-hidden bg-gradient-to-br from-rose-50 via-white to-sky-50">
       <div className="pointer-events-none absolute inset-x-0 top-[-35%] h-[420px] bg-gradient-primary/25 blur-3xl" />
-      <div className="container relative mx-auto px-6 pb-28 pt-32 lg:px-8 lg:pb-36 lg:pt-40">
+      <section className="container relative mx-auto px-6 py-14 lg:px-8 lg:py-20">
         <Reveal>
           <SectionHeader
             eyebrow="Our story"
-            title="We build growth marketing engines that plug directly into your operating system"
-            description="Corallo Digital was founded by operators who believe brand, performance, and analytics should move in one rhythm. We integrate with your rituals, your data stack, and your creative voice."
+            title="We build digital solutions as coherent systems, not isolated products."
+            description="Corallo Digital exists because modern software is often assembled as fragments. We build systems that hold together across data, design, and execution, so products can grow without losing clarity."
           />
         </Reveal>
 
-        <div className="mt-16 grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-          <Reveal className="space-y-6">
-            <Card tone="muted" elevated className="space-y-6 p-10">
-              <h3 className="text-2xl font-semibold text-primary">
-                Embedded collaboration, not agency hand-offs
-              </h3>
-              <p className="text-base text-secondary">
-                We operate as an extension of your team, adapting to the rituals you already run. Weekly working sessions, transparent dashboards, and shared accountability keep experiments, creative thinking, and strategy shifts aligned.
+        <div className="mt-16 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-16">
+          <Reveal className="space-y-10">
+            <div className="space-y-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-muted">
+                Why we exist
+              </p>
+              <p className="text-lg text-secondary">
+                We work across domains, not a single industry, because the need
+                is consistent: teams need digital systems that are integrated,
+                legible, and built to endure.
               </p>
               <p className="text-base text-secondary">
-                You gain a collective of channel strategists, paid and lifecycle operators, analytics engineers, and creative storytellers who work as one squad. Together, we transform marketing roadmaps into momentum machines.
+                Our approach centers on structure, integration, and calm
+                delivery. We design ecosystems that stay coherent as new tools,
+                products, and capabilities are added.
               </p>
+            </div>
+
+            <Card tone="muted" elevated className="space-y-6 rounded-[2.5rem]">
+              <div className="space-y-3">
+                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-muted">
+                  How we build
+                </p>
+                <h3 className="text-2xl font-semibold text-primary">
+                  A system-first practice with clear operating principles.
+                </h3>
+              </div>
+              <ul className="space-y-4 text-base text-secondary">
+                <li className="flex gap-3">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-accent/70" />
+                  Start with shared infrastructure and data models.
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-accent/70" />
+                  Make every decision traceable to the system.
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-accent/70" />
+                  Keep execution calm, iterative, and legible.
+                </li>
+              </ul>
             </Card>
           </Reveal>
+
           <Reveal>
             <Card
               tone="vibrant"
               elevated
-              className="space-y-6 rounded-[2.5rem] bg-gradient-to-br from-white via-secondary/10 to-accent/10 p-10"
+              className="rounded-[3rem] bg-gradient-to-br from-white via-secondary/10 to-accent/10"
             >
-              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-muted">Impact snapshot</p>
-              <div className="grid gap-6 sm:grid-cols-3">
-                {[
-                  { value: 24, suffix: "+", label: "growth programs launched" },
-                  { value: 18, suffix: "%", label: "average lift in qualified pipeline" },
-                  { value: 12, suffix: "wk", label: "average time to experiment velocity" }
-                ].map((item) => (
-                  <div key={item.label} className="space-y-2">
-                    <AnimatedCounter value={item.value} suffix={item.suffix} className="block text-3xl font-semibold text-primary" />
-                    <p className="text-xs uppercase tracking-[0.25em] text-secondary">{item.label}</p>
-                  </div>
-                ))}
+              <div className="space-y-6">
+                <div className="flex items-center justify-between">
+                  <p className="text-xs font-semibold uppercase tracking-[0.35em] text-muted">
+                    The Corallo ecosystem
+                  </p>
+                  <span className="text-xs uppercase tracking-[0.25em] text-secondary">
+                    System map
+                  </span>
+                </div>
+                <div className="h-[240px] w-full">
+                  <svg
+                    viewBox="0 0 520 260"
+                    className="h-full w-full"
+                    role="img"
+                    aria-label="System diagram with a core module and connected nodes"
+                  >
+                    <defs>
+                      <radialGradient id="coreGlow" cx="50%" cy="50%" r="60%">
+                        <stop offset="0%" stopColor="var(--color-accent)" stopOpacity="0.35" />
+                        <stop offset="70%" stopColor="var(--color-accent)" stopOpacity="0.08" />
+                        <stop offset="100%" stopColor="var(--color-accent)" stopOpacity="0" />
+                      </radialGradient>
+                      <linearGradient id="nodeFill" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="var(--color-surface)" />
+                        <stop offset="100%" stopColor="var(--color-surface-elevated)" />
+                      </linearGradient>
+                    </defs>
+
+                    <rect
+                      x="20"
+                      y="20"
+                      width="480"
+                      height="220"
+                      rx="24"
+                      fill="transparent"
+                      stroke="var(--color-border)"
+                      strokeDasharray="6 8"
+                      opacity="0.35"
+                    />
+
+                    <g opacity="0.25" stroke="var(--color-border)">
+                      {[0, 1, 2, 3, 4].map((row) => (
+                        <line
+                          key={`row-${row}`}
+                          x1="50"
+                          y1={50 + row * 40}
+                          x2="470"
+                          y2={50 + row * 40}
+                        />
+                      ))}
+                      {[0, 1, 2, 3, 4, 5, 6].map((col) => (
+                        <line
+                          key={`col-${col}`}
+                          x1={70 + col * 60}
+                          y1="40"
+                          x2={70 + col * 60}
+                          y2="220"
+                        />
+                      ))}
+                    </g>
+
+                    <circle cx="260" cy="130" r="60" fill="url(#coreGlow)" />
+                    <rect
+                      x="210"
+                      y="95"
+                      width="100"
+                      height="70"
+                      rx="18"
+                      fill="url(#nodeFill)"
+                      stroke="var(--color-border)"
+                    />
+                    <text
+                      x="260"
+                      y="138"
+                      textAnchor="middle"
+                      fontSize="12"
+                      fill="var(--color-secondary)"
+                      letterSpacing="0.2em"
+                    >
+                      CORE
+                    </text>
+
+                    {[
+                      { x: 110, y: 60 },
+                      { x: 390, y: 60 },
+                      { x: 80, y: 170 },
+                      { x: 390, y: 180 },
+                      { x: 250, y: 200 }
+                    ].map((node) => (
+                      <g key={`${node.x}-${node.y}`}>
+                        <rect
+                          x={node.x}
+                          y={node.y}
+                          width="70"
+                          height="40"
+                          rx="12"
+                          fill="url(#nodeFill)"
+                          stroke="var(--color-border)"
+                        />
+                        <circle
+                          cx={node.x + 12}
+                          cy={node.y + 12}
+                          r="4"
+                          fill="var(--color-accent)"
+                          opacity="0.7"
+                        />
+                      </g>
+                    ))}
+
+                    <g stroke="var(--color-border)" strokeWidth="1.2" opacity="0.6">
+                      <line x1="210" y1="115" x2="180" y2="80" />
+                      <line x1="310" y1="115" x2="390" y2="80" />
+                      <line x1="210" y1="145" x2="150" y2="190" />
+                      <line x1="310" y1="145" x2="390" y2="200" />
+                      <line x1="260" y1="165" x2="285" y2="200" />
+                    </g>
+                  </svg>
+                </div>
+                <p className="text-sm text-secondary">
+                  A modular system where each product can stand alone or connect
+                  through shared data, identity, and workflow.
+                </p>
               </div>
-              <p className="text-sm text-secondary">
-                Our focus: collaborative measurement frameworks, creative intelligence loops, and channel orchestration that drives compounding learnings.
-              </p>
             </Card>
           </Reveal>
         </div>
+      </section>
 
-        <div className="mt-20 overflow-hidden rounded-[3rem] border border-[var(--color-border)] bg-white/90 p-10 shadow-strong">
-          <div className="flex items-center justify-between">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-muted">Timeline</p>
-            <span className="text-sm text-secondary">From operator collective to full-service growth studio</span>
-          </div>
-          <div className="mt-10 overflow-x-auto pb-4">
-            <div className="flex min-w-[800px] gap-10">
-              {timeline.map((item) => (
-                <Reveal
-                  key={item.year}
-                  className="relative flex min-w-[260px] flex-col gap-4 rounded-3xl border border-[var(--color-border)] bg-surface/95 p-6 shadow-soft"
-                >
-                  <span className="text-xs font-semibold uppercase tracking-[0.3em] text-primary/70">{item.year}</span>
-                  <h4 className="text-lg font-semibold text-primary">{item.title}</h4>
-                  <p className="text-sm text-secondary">{item.copy}</p>
-                  <span className="text-xs font-semibold uppercase tracking-[0.25em] text-muted">{item.highlight}</span>
-                </Reveal>
-              ))}
+      <section className="container mx-auto px-6 py-14 lg:px-8">
+        <Reveal className="space-y-10">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div className="space-y-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-muted">
+                How we build
+              </p>
+              <h2 className="text-3xl font-semibold text-primary">
+                Operating principles that keep the system coherent.
+              </h2>
             </div>
+            <p className="max-w-xl text-base text-secondary">
+              We work in a way that keeps teams aligned, decisions visible, and
+              systems resilient.
+            </p>
           </div>
-        </div>
-
-        <Reveal className="mt-20 space-y-10">
-          <SectionHeader eyebrow="Testimonials" title="Partners on the journey" />
-          <TestimonialsCarousel testimonials={testimonials} />
+          <div className="grid gap-6 md:grid-cols-3">
+            {principles.map((item) => (
+              <Card key={item.title} tone="muted" elevated className="rounded-[2.5rem]">
+                <h3 className="text-lg font-semibold text-primary">{item.title}</h3>
+                <p className="mt-3 text-sm text-secondary">{item.description}</p>
+              </Card>
+            ))}
+          </div>
         </Reveal>
-      </div>
+
+        <Reveal className="mt-14 space-y-10">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div className="space-y-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-muted">
+                What we build
+              </p>
+              <h2 className="text-3xl font-semibold text-primary">
+                Capability categories across the Corallo portfolio.
+              </h2>
+            </div>
+            <p className="max-w-xl text-base text-secondary">
+              Each capability can be delivered independently or connected into a
+              broader ecosystem.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {capabilities.map((item) => (
+              <Card key={item.title} tone="vibrant" elevated className="rounded-[2.5rem]">
+                <h3 className="text-lg font-semibold text-primary">{item.title}</h3>
+                <p className="mt-3 text-sm text-secondary">{item.description}</p>
+              </Card>
+            ))}
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="container mx-auto px-6 pb-20 pt-8 lg:px-8 lg:pb-28">
+        <Reveal>
+          <Card
+            tone="vibrant"
+            elevated
+            className="flex flex-col gap-8 rounded-[3rem] bg-gradient-to-br from-white via-secondary/10 to-accent/10 lg:flex-row lg:items-center lg:justify-between"
+          >
+            <div className="space-y-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-muted">
+                What’s next
+              </p>
+              <h2 className="text-3xl font-semibold text-primary">
+                We are expanding the ecosystem with new domain products and
+                shared infrastructure.
+              </h2>
+              <p className="max-w-2xl text-base text-secondary">
+                Our roadmap focuses on deeper integration, clearer operational
+                tooling, and a steady cadence of releases that keep every part
+                of the system aligned.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Button href="/services" variant="secondary" size="lg">
+                Explore solutions
+              </Button>
+              <Button href="/contact" variant="primary" size="lg">
+                Contact Corallo
+              </Button>
+            </div>
+          </Card>
+        </Reveal>
+      </section>
     </div>
   );
 }
-

@@ -37,11 +37,11 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           aria-invalid={Boolean(error)}
           aria-disabled={disabled}
           className={cn(
-            "w-full rounded-xl border border-[var(--color-border)] bg-surface/95 px-4 py-2.5 text-sm font-medium text-primary-800 placeholder:text-muted transition",
+            "w-full rounded-xl border border-[var(--color-border)] bg-surface/95 px-4 py-2.5 text-sm font-medium text-primary placeholder:text-muted transition",
             "focus-visible:border-secondary focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)]",
             "disabled:cursor-not-allowed disabled:bg-muted/15 disabled:text-muted",
             error
-              ? "border-danger text-primary-900 focus-visible:border-danger focus-visible:ring-danger"
+              ? "border-danger text-primary focus-visible:border-danger focus-visible:ring-danger"
               : "hover:border-secondary/50",
             className
           )}

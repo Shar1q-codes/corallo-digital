@@ -29,7 +29,7 @@ export function CaseStudiesStrip({ studies }: CaseStudiesStripProps) {
           </div>
           <Link
             href="/work"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition hover:text-primary-600"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition hover:text-secondary"
           >
             View all case studies
             <span aria-hidden>-&gt;</span>
@@ -43,7 +43,7 @@ export function CaseStudiesStrip({ studies }: CaseStudiesStripProps) {
                 key={study.slug}
                 whileHover={{ y: -12 }}
                 className={cn(
-                  "relative flex w-[320px] shrink-0 snap-start flex-col overflow-hidden rounded-[2rem] border border-white/40 bg-white/80 p-6 shadow-strong backdrop-blur",
+                  "relative flex w-[320px] shrink-0 snap-start flex-col overflow-hidden rounded-[2rem] border border-border/60 bg-surface/80 p-6 shadow-strong backdrop-blur",
                   "lg:w-[380px]"
                 )}
               >
@@ -69,7 +69,7 @@ export function CaseStudiesStrip({ studies }: CaseStudiesStripProps) {
                   {study.metrics.slice(0, 3).map((metric) => (
                     <span
                       key={`${study.slug}-${metric.label}`}
-                      className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-white/60 px-3 py-1 font-medium text-primary"
+                      className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-surface/60 px-3 py-1 font-medium text-primary"
                     >
                       <span className="text-muted">{metric.label}</span>
                       <span>{metric.value}</span>
