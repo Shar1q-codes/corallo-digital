@@ -10,12 +10,12 @@ export default function NotFound() {
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted">404</p>
         <h1 className="text-4xl font-semibold text-primary">We lost that constellation</h1>
         <p className="text-base text-secondary">
-          The page you are looking for doesn't exist or has been moved. Let's get you back to exploring modern marketing.
+          The page you are looking for doesn't exist or has been moved. Let's get you back to the ecosystem.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button href="/">Back to Home</Button>
-          <Button href="/contact" variant="secondary">
-            Start a project
+          <Button href="/services" variant="secondary">
+            Explore Ecosystem
           </Button>
         </div>
       </Reveal>

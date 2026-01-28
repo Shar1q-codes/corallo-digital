@@ -1,19 +1,20 @@
-import { Card } from "@/components/card";
-import { ContactForm } from "@/components/contact-form";
-import { Reveal } from "@/components/reveal";
-import { SectionHeader } from "@/components/section-header";
-import { AnimatedHalo } from "@/components/animated-halo";
-import { createMetadata } from "@/lib/seo";
+import { Card } from '@/components/card';
+import { ContactForm } from '@/components/contact-form';
+import { Reveal } from '@/components/reveal';
+import { SectionHeader } from '@/components/section-header';
+import { AnimatedHalo } from '@/components/animated-halo';
+import { createMetadata } from '@/lib/seo';
 
 export const metadata = createMetadata({
-  title: "Contact - Corallo Digital",
-  description: "Start the conversation with Corallo Digital. Share your growth goals and we'll shape a tailored strategy."
+  title: 'Contact - Corallo Digital',
+  description:
+    'Reach Corallo Digital for product access, partnerships, or general ecosystem inquiries.',
 });
 
 const info = [
-  { label: "Email", value: "hello@corallodigital.com" },
-  { label: "Office", value: "Hyderabad, operating globally" },
-  { label: "Working hours", value: "Mon - Fri, 9:00am - 7:00pm IST" }
+  { label: 'Email', value: 'hello@corallodigital.com' },
+  { label: 'Office', value: 'Hyderabad, operating globally' },
+  { label: 'Working hours', value: 'Mon - Fri, 9:00am - 7:00pm IST' },
 ];
 
 export default function ContactPage() {
@@ -24,8 +25,8 @@ export default function ContactPage() {
         <Reveal className="mx-auto max-w-3xl text-center">
           <SectionHeader
             eyebrow="Contact"
-            title="Let's shape your next growth horizon"
-            description="Tell us about your audience, velocity targets, and the biggest bottlenecks today. We'll respond within one business day with a working session agenda."
+            title="Connect with Corallo Digital"
+            description="Corallo Digital builds and operates owned digital systems across multiple domains. Use this page to reach us for product access, partnerships, collaboration, or general inquiries related to the ecosystem."
             align="center"
           />
         </Reveal>
@@ -43,29 +44,38 @@ export default function ContactPage() {
               className="relative space-y-6 rounded-[3rem] bg-gradient-to-br from-white via-rose-50 to-amber-100/80 p-12"
             >
               <div className="space-y-3">
-                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-muted">What happens next</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-muted">
+                  What happens next
+                </p>
                 <h3 className="text-2xl font-semibold text-primary">
-                  A 45-minute working session focused on clarity, prioritization, and next actions.
+                  We review inbound messages for alignment with our ecosystem.
                 </h3>
                 <p className="text-sm text-secondary">
-                  We'll bring an initial perspective on your funnel, highlight quick wins, and sketch a roadmap aligned to experimentation velocity and revenue KPIs.
+                  Corallo Digital builds and operates its own digital systems.
+                  Inbound messages are reviewed to determine relevance across
+                  product access, partnerships, collaboration, or general
+                  inquiries related to our platforms.
                 </p>
               </div>
 
               <div className="grid gap-6 rounded-3xl border border-white/80 bg-white/80 p-8 shadow-soft">
                 <p className="text-xs font-semibold uppercase tracking-[0.35em] text-muted">
-                  Conversation touchpoints
+                  CONVERSATION CONTEXTS
                 </p>
                 <ul className="space-y-4 text-sm text-secondary">
-                  <li>- Growth audit review: traffic, conversion, retention, and creative performance.</li>
-                  <li>- Experiment backlog prioritization: align quick wins versus horizon bets.</li>
-                  <li>- Engagement models: embedded pods, modular retainers, or advisory support.</li>
+                  <li>- Product access, early interest, or platform questions</li>
+                  <li>- Strategic partnerships and ecosystem collaboration</li>
+                  <li>- Feedback, research, or domain expertise alignment</li>
+                  <li>- General communication related to Corallo Digital</li>
                 </ul>
               </div>
 
               <div className="grid gap-4 text-sm text-secondary">
                 {info.map((item) => (
-                  <div key={item.label} className="flex items-start justify-between gap-4">
+                  <div
+                    key={item.label}
+                    className="flex items-start justify-between gap-4"
+                  >
                     <span className="text-xs font-semibold uppercase tracking-[0.35em] text-muted">
                       {item.label}
                     </span>
@@ -80,4 +90,3 @@ export default function ContactPage() {
     </div>
   );
 }
-

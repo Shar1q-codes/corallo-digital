@@ -25,15 +25,15 @@ const bodyFont = Work_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://corallo-digital.example.com"),
   title: {
-    default: "Corallo Digital - Full-Funnel Marketing Studio",
+    default: "Corallo Digital - Digital Systems Ecosystem",
     template: "%s | Corallo Digital"
   },
   description:
-    "Corallo Digital is a full-funnel digital marketing studio helping growth-stage brands scale with strategy, creative, and analytics.",
+    "Corallo Digital builds and operates owned digital systems across analytics, operations, and compliance.",
   openGraph: {
-    title: "Corallo Digital - Full-Funnel Marketing Studio",
+    title: "Corallo Digital - Digital Systems Ecosystem",
     description:
-      "Corallo Digital is a full-funnel digital marketing studio helping growth-stage brands scale with strategy, creative, and analytics.",
+      "Corallo Digital builds and operates owned digital systems across analytics, operations, and compliance.",
     url: "https://corallo-digital.example.com",
     siteName: "Corallo Digital",
     locale: "en_US",
@@ -41,18 +41,17 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Corallo Digital - Full-Funnel Marketing Studio",
+    title: "Corallo Digital - Digital Systems Ecosystem",
     description:
-      "Corallo Digital is a full-funnel digital marketing studio helping growth-stage brands scale with strategy, creative, and analytics.",
+      "Corallo Digital builds and operates owned digital systems across analytics, operations, and compliance.",
     creator: "@corallodigital"
   },
   keywords: [
-    "digital marketing agency",
-    "growth marketing",
-    "SEO services",
-    "paid media",
-    "content marketing",
-    "demand generation"
+    "digital systems",
+    "analytics platforms",
+    "operational tooling",
+    "compliance systems",
+    "product ecosystem"
   ],
   authors: [{ name: "Corallo Digital" }]
 };
@@ -74,7 +73,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Footer />
         <WhatsAppWidget
           phone="919398219300"
-          message="Hi Corallo Digital team, I would love to discuss a growth marketing engagement."
+          message="Hi Corallo Digital team, I have a question about your systems."
         />
       </body>
     </html>

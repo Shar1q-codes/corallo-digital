@@ -1,6 +1,10 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import Link, { type LinkProps } from "next/link";
-import { ButtonHTMLAttributes, PropsWithChildren } from "react";
+import {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  PropsWithChildren
+} from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -66,7 +70,8 @@ interface BaseButtonProps
 }
 
 type AnchorButtonProps = BaseButtonProps &
-  Omit<LinkProps, "href"> & {
+  Omit<LinkProps, "href"> &
+  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> & {
     href: string;
   };
 

@@ -12,7 +12,7 @@ import { cn } from '@/lib/utils';
 
 const links = [
   { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
+  { href: '/services', label: 'Ecosystem' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -113,14 +113,13 @@ export function NavBar() {
             variant="ghost"
             className="text-[color:var(--text-inverse)] hover:text-[color:var(--text-inverse)] hover:translate-y-[-1px] dark:text-[color:var(--text-primary)] dark:hover:text-[color:var(--text-inverse)]"
           >
-            View Services
+            View Ecosystem
           </Button>
           <Button
             href="/contact"
-            variant="marketing"
-            className="bg-secondary bg-none text-[color:var(--text-inverse)] shadow-glow hover:bg-[color:var(--color-secondary-hover)] hover:shadow-strong"
+            variant="secondary"
           >
-            Get a Proposal
+            Contact
           </Button>
         </div>
         <div className="flex items-center gap-3 lg:hidden">
@@ -178,14 +177,14 @@ export function NavBar() {
           </ul>
           <div className="mt-6 flex flex-col gap-3">
             <Button href="/services" variant="ghost" className="justify-center">
-              View Services
+              View Ecosystem
             </Button>
             <Button
               href="/contact"
-              variant="marketing"
-              className="justify-center shadow-glow"
+              variant="secondary"
+              className="justify-center"
             >
-              Get a Proposal
+              Contact
             </Button>
           </div>
         </nav>

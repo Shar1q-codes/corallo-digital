@@ -24,7 +24,7 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 
 export function WhatsAppWidget({ phone, message }: WhatsAppWidgetProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [draft, setDraft] = useState(message ?? "Hi Corallo Digital team, I’d like to talk about growth marketing.");
+  const [draft, setDraft] = useState(message ?? "Hi Corallo Digital team, I have a question about your systems.");
 
   const whatsappUrl = useMemo(() => {
     const encoded = encodeURIComponent(draft.trim());
@@ -56,12 +56,12 @@ export function WhatsAppWidget({ phone, message }: WhatsAppWidgetProps) {
               onClick={() => setIsOpen(false)}
               aria-label="Close WhatsApp chat preview"
             >
-              ×
+              x
             </button>
           </div>
           <div className="wa-bubble">
-            Hi there 👋<br />
-            Tell us about your goals and we’ll reply on WhatsApp.
+            Hi there<br />
+            Share your question and we will reply on WhatsApp.
           </div>
           <form className="wa-form" onSubmit={handleSend}>
             <textarea

@@ -51,15 +51,15 @@ export function Hero() {
           animate="visible"
         >
           <div className="space-y-4">
-            <Badge className=" bg-surface/80 px-4 py-1.5 text-xs uppercase tracking-[0.4em] text-primary rounded-[2.25rem] border border-border/60">
-              Delivering digital solutions across industries and platforms
+            <Badge className="bg-surface/80 px-4 py-1.5 text-xs uppercase tracking-[0.4em] text-primary rounded-[2.25rem] border border-border/60">
+              Owned digital systems across core domains
             </Badge>
             <h1 className="text-balance text-4xl font-semibold sm:text-5xl lg:text-[3.35rem]">
-              End-to-end digital execution for sustained growth.
+              A coherent ecosystem of digital products.
             </h1>
             <p className="max-w-xl text-lg text-secondary">
-              Corallo Digital embeds with your team to build scalable digital
-              solutions, driven by data and accountability.
+              Corallo Digital builds and operates connected systems designed for
+              clarity, integration, and long-term durability.
             </p>
           </div>
 
@@ -69,15 +69,15 @@ export function Hero() {
             className="flex flex-wrap items-center gap-4"
           >
             <Button
-              href="/contact"
+              href="/services"
               size="lg"
-              variant="marketing"
-              className="shadow-glow hover:shadow-strong"
+              variant="primary"
+              className="shadow-soft hover:shadow-strong"
             >
-              Book a strategy session
+              Explore ecosystem
             </Button>
-            <Button href="/services" size="lg" variant="outline">
-              Explore our services
+            <Button href="/contact" size="lg" variant="outline">
+              Contact
             </Button>
           </motion.div>
 
@@ -87,9 +87,9 @@ export function Hero() {
             custom={0.3}
           >
             <div className="flex gap-6 text-xs uppercase tracking-[0.3em] text-muted">
-              <span>Analytics Platforms</span>
-              <span>Operational Systems</span>
-              <span>Intelligence & Insights</span>
+              <span>Analytics Dashboards</span>
+              <span>ATS</span>
+              <span>TaxOps</span>
             </div>
           </motion.div>
         </motion.div>
@@ -104,7 +104,7 @@ export function Hero() {
             <div className="relative aspect-[5/5] overflow-hidden rounded-[2.25rem] border border-border/60 bg-surface/60 shadow-strong backdrop-blur">
               <Image
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80"
-                alt="Corallo Digital team reviewing growth experiments"
+                alt="Corallo Digital system blueprint"
                 fill
                 className="object-cover"
                 priority

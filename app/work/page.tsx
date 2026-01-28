@@ -1,12 +1,11 @@
-import { Button } from "@/components/button";
 import { Card } from "@/components/card";
 import { SectionHeader } from "@/components/section-header";
 import { createMetadata } from "@/lib/seo";
 import { Reveal } from "@/components/reveal";
 
 export const metadata = createMetadata({
-  title: "Case Studies - Corallo Digital",
-  description: "We're getting ready to share new collaborations soon."
+  title: "Updates - Corallo Digital",
+  description: "Ecosystem updates and product notes will appear here." 
 });
 
 export default function WorkPage() {
@@ -14,20 +13,17 @@ export default function WorkPage() {
     <div className="container mx-auto px-6 py-24 lg:px-8">
       <Reveal>
         <SectionHeader
-          eyebrow="Portfolio"
-          title="Case studies coming soon"
-          description="We're a new studio focused on building our first slate of engagements. Check back soon for fresh work."
+          eyebrow="Updates"
+          title="Ecosystem updates coming soon"
+          description="This space will highlight product notes and system releases as the portfolio grows."
         />
       </Reveal>
       <Reveal className="mt-16">
         <Card tone="muted" elevated className="space-y-6">
           <p className="text-base text-secondary">
-            We're heads down building launch programs right now, so we don't have public case studies just yet. If you'd
-            like to see how we can support your next chapter, let's start with a working session.
+            We are documenting releases and internal milestones now. Public
+            updates will appear here as each system moves forward.
           </p>
-          <Button href="/contact" className="w-full justify-center sm:w-auto">
-            Plan a working session
-          </Button>
         </Card>
       </Reveal>
     </div>

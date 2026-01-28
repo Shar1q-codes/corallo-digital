@@ -3,14 +3,13 @@ import Link from 'next/link';
 const footerLinks = {
   company: [
     { label: 'About', href: '/about' },
-    { label: 'Services', href: '/services' },
+    { label: 'Ecosystem', href: '/services' },
     { label: 'Contact', href: '/contact' },
   ],
-  services: [
-    { label: 'SEO', href: '/services/seo' },
-    { label: 'Paid Media', href: '/services/ppc' },
-    { label: 'Content', href: '/services/content' },
-    { label: 'Analytics', href: '/services/analytics' },
+  ecosystem: [
+    { label: 'Analytics Dashboards', href: '/services#analytics-dashboards' },
+    { label: 'ATS', href: '/services#ats' },
+    { label: 'TaxOps', href: '/services#taxops' },
   ],
   resources: [
     { label: 'Privacy', href: '#' },
@@ -41,9 +40,8 @@ export function Footer() {
               Corallo Digital
             </Link>
             <p className="text-sm text-secondary">
-              We design, build, and operate unified digital systems—aligning
-              strategy, engineering, and analytics to help ambitious
-              organizations compound growth with precision.
+              We build and operate a portfolio of digital systems designed for
+              clarity, integration, and long-term coherence.
             </p>
           </div>
 
@@ -73,8 +71,8 @@ export function Footer() {
                 Contact
               </h4>
               <p className="text-sm text-secondary">
-                Reach out at hello@corallodigital.com to plan a working session,
-                explore embedded pods, or request our latest case studies.
+                Reach out at hello@corallodigital.com for product access,
+                partnerships, or general ecosystem inquiries.
               </p>
             </div>
           </div>
@@ -102,3 +100,4 @@ export function Footer() {
     </footer>
   );
 }
+
