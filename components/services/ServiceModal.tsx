@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 import { Button } from "@/components/button";
 import { Card } from "@/components/card";
@@ -19,6 +20,7 @@ const focusableSelectors =
 export function ServiceModal({ service, open, onClose }: ServiceModalProps) {
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const closeRef = useRef<HTMLButtonElement | null>(null);
+  const [mounted, setMounted] = useState(false);
 
   const titleId = useMemo(
     () => (service ? `service-modal-${service.slug}` : undefined),
@@ -26,9 +28,20 @@ export function ServiceModal({ service, open, onClose }: ServiceModalProps) {
   );
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
     if (!open) return;
 
     const previous = document.activeElement as HTMLElement | null;
+    const previousOverflow = document.body.style.overflow;
+    const previousPaddingRight = document.body.style.paddingRight;
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    document.body.style.overflow = "hidden";
+    if (scrollbarWidth > 0) {
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    }
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -66,15 +79,17 @@ export function ServiceModal({ service, open, onClose }: ServiceModalProps) {
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = previousOverflow;
+      document.body.style.paddingRight = previousPaddingRight;
       previous?.focus();
     };
   }, [open, onClose]);
 
-  if (!open || !service) return null;
+  if (!open || !service || !mounted) return null;
 
-  return (
+  return createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 px-6 py-10 backdrop-blur-sm"
+      className="fixed inset-0 z-[99999] flex min-h-[100svh] items-center justify-center bg-black/30 px-6 py-12 backdrop-blur-sm"
       onClick={onClose}
       aria-hidden={!open}
     >
@@ -92,7 +107,7 @@ export function ServiceModal({ service, open, onClose }: ServiceModalProps) {
         <Card
           tone="vibrant"
           elevated
-          className="rounded-[2.75rem] bg-gradient-to-br from-white via-secondary/10 to-accent/10 p-10 shadow-strong"
+          className="max-h-[calc(100svh-6rem)] overflow-y-auto rounded-[2.75rem] bg-gradient-to-br from-white via-secondary/10 to-accent/10 p-10 shadow-strong"
         >
           <div className="flex items-start justify-between gap-6">
             <div>
@@ -150,6 +165,7 @@ export function ServiceModal({ service, open, onClose }: ServiceModalProps) {
           </div>
         </Card>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
