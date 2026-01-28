@@ -7,11 +7,11 @@ import { Badge } from '@/components/badge';
 import { Button } from '@/components/button';
 
 const textVariants = {
-  hidden: { opacity: 0, y: 32 },
+  hidden: { opacity: 1, y: 0 },
   visible: (delay = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { delay, duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+    transition: { delay, duration: 0.45, ease: [0.22, 1, 0.36, 1] },
   }),
 };
 
@@ -47,7 +47,7 @@ export function Hero() {
         <motion.div
           className="space-y-8 text-[color:var(--text-primary)]"
           variants={textVariants}
-          initial="hidden"
+          initial={false}
           animate="visible"
         >
           <div className="space-y-4">
@@ -96,7 +96,7 @@ export function Hero() {
 
         <motion.div
           className="relative grid place-items-center"
-          initial={{ opacity: 0, x: 40 }}
+          initial={false}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >

@@ -18,8 +18,7 @@ const links = [
 ];
 
 const headerVariants = {
-  initial: { y: -32, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+  visible: { y: 0, opacity: 1, transition: { duration: 0.35, ease: 'easeOut' } },
 };
 
 export function NavBar() {
@@ -79,7 +78,7 @@ export function NavBar() {
   return (
     <motion.header
       variants={headerVariants}
-      initial="initial"
+      initial={false}
       animate="visible"
       className={cn(
         'sticky top-0 z-50 transition-all duration-300',
