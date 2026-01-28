@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const footerLinks = {
@@ -34,10 +35,12 @@ export function Footer() {
               href="/"
               className="flex items-center gap-3 text-lg font-semibold tracking-tight text-primary"
             >
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-primary text-inverse shadow-soft">
-                CD
-              </span>
-              Corallo Digital
+              <Image
+                src="/images/CDS_LOGO.png"
+                alt="Corallo Digital"
+                width={176}
+                height={110}
+              />
             </Link>
             <p className="text-sm text-secondary">
               We build and operate a portfolio of digital systems designed for
