@@ -8,9 +8,9 @@ const footerLinks = {
     { label: 'Contact', href: '/contact' },
   ],
   ecosystem: [
-    { label: 'Analytics Dashboards', href: '/services#analytics-dashboards' },
-    { label: 'ATS', href: '/services#ats' },
-    { label: 'TaxOps', href: '/services#taxops' },
+    { label: 'Corallo Analytics', href: '/services#analytics-dashboards' },
+    { label: 'Corallo Hire', href: '/services#ats' },
+    { label: 'Corallo TaxOps', href: '/services#taxops' },
   ],
   resources: [
     { label: 'Privacy', href: '#' },

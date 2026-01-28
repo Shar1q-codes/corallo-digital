@@ -75,7 +75,7 @@ const TaxOpsIcon: ServiceCatalogItem["icon"] = ({ className }) => (
 export const servicesCatalog: ServiceCatalogItem[] = [
   {
     id: "analytics-dashboards",
-    name: "Analytics Dashboards",
+    name: "Corallo Analytics",
     slug: "analytics-dashboards",
     category: "Analytics",
     status: "Live",
@@ -94,13 +94,13 @@ export const servicesCatalog: ServiceCatalogItem[] = [
   },
   {
     id: "ats",
-    name: "ATS",
+    name: "Corallo Hire",
     slug: "ats",
     category: "Operations",
     status: "Private",
     oneLiner: "A streamlined applicant tracking system for structured hiring workflows.",
     description:
-      "An internal-grade ATS designed to keep hiring structured and auditable roles, stages, evaluations, and decisions in one place. Built for clarity, repeatability, and low-friction collaboration.",
+      "An internal-grade Corallo Hire system designed to keep hiring structured and auditable roles, stages, evaluations, and decisions in one place. Built for clarity, repeatability, and low-friction collaboration.",
     highlights: [
       "Pipeline stages with clear state",
       "Scorecards and evaluation notes",
@@ -113,14 +113,14 @@ export const servicesCatalog: ServiceCatalogItem[] = [
   },
   {
     id: "taxops",
-    name: "TaxOps",
+    name: "Corallo TaxOps",
     slug: "taxops",
     category: "Compliance Systems",
     status: "Research",
     oneLiner:
       "A systems-layer for audit-oriented tax operations and compliance workflows.",
     description:
-      "TaxOps is a product line focused on structured tax operations, including document intake, classification, review workflows, and traceable outputs. Built as a system of modules that can evolve without breaking operating guarantees.",
+      "Corallo TaxOps is a product line focused on structured tax operations, including document intake, classification, review workflows, and traceable outputs. Built as a system of modules that can evolve without breaking operating guarantees.",
     highlights: [
       "Document intake and structured extraction",
       "Workflow-driven review and findings",

@@ -23,8 +23,8 @@ const NODES: Node[] = [
   },
   {
     id: 'ats',
-    label: 'ATS / Job Platform',
-    blurb: 'Hiring workflow, ATS, and job marketplace tooling.',
+    label: 'Corallo Hire / Job Platform',
+    blurb: 'Hiring workflow, Corallo Hire, and job marketplace tooling.',
     x: 82,
     y: 28,
   },

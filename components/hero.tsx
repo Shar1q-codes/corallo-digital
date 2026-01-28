@@ -87,9 +87,9 @@ export function Hero() {
             custom={0.3}
           >
             <div className="flex gap-6 text-xs uppercase tracking-[0.3em] text-muted">
-              <span>Analytics Dashboards</span>
-              <span>ATS</span>
-              <span>TaxOps</span>
+              <span>Corallo Analytics</span>
+              <span>Corallo Hire</span>
+              <span>Corallo TaxOps</span>
             </div>
           </motion.div>
         </motion.div>
