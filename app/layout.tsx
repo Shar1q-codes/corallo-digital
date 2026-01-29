@@ -6,7 +6,7 @@ import { Manrope, Work_Sans } from "next/font/google";
 
 import { Footer } from "@/components/footer";
 import { NavBar } from "@/components/nav-bar";
-import { WhatsAppWidget } from "@/components/whatsapp-widget";
+// import { WhatsAppWidget } from "@/components/whatsapp-widget";
 
 const headingFont = Manrope({
   subsets: ["latin"],
@@ -71,10 +71,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {children}
         </main>
         <Footer />
-        <WhatsAppWidget
+        {/* <WhatsAppWidget
           phone="919398219300"
           message="Hi Corallo Digital team, I have a question about your systems."
-        />
+        /> */}
       </body>
     </html>
   );
