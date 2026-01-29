@@ -53,7 +53,11 @@ export const metadata: Metadata = {
     "compliance systems",
     "product ecosystem"
   ],
-  authors: [{ name: "Corallo Digital" }]
+  authors: [{ name: "Corallo Digital" }],
+  icons: {
+    icon: "/images/cds_favicon.png",
+    shortcut: "/images/cds_favicon.png"
+  }
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
