@@ -3,7 +3,7 @@ import { Card } from '@/components/card';
 import { Hero } from '@/components/hero';
 import { Reveal } from '@/components/reveal';
 import { SectionHeader } from '@/components/section-header';
-import { EcosystemVisual } from '@/components/EcosystemVisual';
+import { EcosystemCard } from '@/components/EcosystemCard';
 
 import { createMetadata } from '@/lib/seo';
 import { servicesCatalog } from '@/data/services';
@@ -62,19 +62,7 @@ export default async function HomePage() {
                   <p className="mt-3 text-sm text-secondary">{item.copy}</p>
                 </Card>
               ))}
-              <Card
-                tone="muted"
-                elevated
-                className="relative overflow-hidden p-6"
-              >
-                <span className="text-xs font-semibold uppercase tracking-[0.35em] text-muted">
-                  ECOSYSTEM LAYER
-                </span>
-
-                <div className="mt-4">
-                  <EcosystemVisual />
-                </div>
-              </Card>
+              <EcosystemCard />
             </div>
           </Reveal>
           <Reveal className="relative rounded-[3rem] border border-[var(--color-border)] bg-gradient-to-br from-white via-surface to-rose-50/70 p-10 shadow-strong">
