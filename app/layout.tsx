@@ -6,6 +6,7 @@ import { Manrope, Work_Sans } from "next/font/google";
 
 import { Footer } from "@/components/footer";
 import { NavBar } from "@/components/nav-bar";
+import { siteUrl, siteUrlObj } from "@/lib/site";
 // import { WhatsAppWidget } from "@/components/whatsapp-widget";
 
 const headingFont = Manrope({
@@ -23,7 +24,7 @@ const bodyFont = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://corallo-digital.example.com"),
+  metadataBase: siteUrlObj,
   title: {
     default: "Corallo Digital - Digital Systems Ecosystem",
     template: "%s | Corallo Digital"
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     title: "Corallo Digital - Digital Systems Ecosystem",
     description:
       "Corallo Digital builds and operates owned digital systems across analytics, operations, and compliance.",
-    url: "https://corallo-digital.example.com",
+    url: siteUrl,
     siteName: "Corallo Digital",
     locale: "en_US",
     type: "website"

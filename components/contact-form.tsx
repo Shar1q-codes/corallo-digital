@@ -43,7 +43,7 @@ export function ContactForm({ className }: { className?: string }) {
     const result = contactSchema.safeParse({
       name: formState.name,
       email: formState.email,
-      company: formState.affiliation || undefined,
+      affiliation: formState.affiliation || undefined,
       website: formState.website ? formState.website : undefined,
       message: formState.message,
     });

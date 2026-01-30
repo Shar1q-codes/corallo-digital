@@ -225,8 +225,8 @@ export function ServicesCatalog() {
         <div className="rounded-3xl border border-dashed border-[var(--color-border)] bg-surface/70 p-6 text-sm text-secondary">
           <p className="font-medium text-primary">No matches found.</p>
           <p className="mt-2 text-secondary">
-            Try searching by product name (e.g. “analytics”, “hire”, “tax”) or
-            a category like “operations”.
+            Try searching by product name (e.g. "analytics", "hire", "tax") or a
+            category like "operations".
           </p>
         </div>
       ) : null}
